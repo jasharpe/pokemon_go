@@ -12,7 +12,8 @@
     background: #f5f5f5;
     color: #333;
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 800px;
+    width: 95%;
   }
   
   h1 {
@@ -20,6 +21,7 @@
   }
 
   .input-section, .results-section {
+    display: block;
     background: #fff;
     padding: 15px;
     margin-bottom: 20px;
@@ -34,7 +36,6 @@
 
   .input-section input[type="number"],
   .input-section input[type="text"] {
-    width: 95%; /* slightly reduce to provide right-side margin visually */
     padding: 8px;
     margin-bottom: 12px;
     border: 1px solid #ccc;
@@ -42,7 +43,7 @@
   }
 
   .input-section button {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     background: #28a745;
     color: #fff;
@@ -91,18 +92,6 @@
   .highlight {
     background: #ffd700;
   }
-
-  .example-link {
-    margin: 20px auto;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-  }
-
-  .example-link a {
-    color: #007bff;
-    word-wrap: break-word;
-  }
 </style>
 </head>
 <body>
@@ -132,15 +121,6 @@
   <div class="results-section">
     <h2>Possible Combinations</h2>
     <div id="results"></div>
-  </div>
-
-  <div class="example-link">
-    <strong>Example URL to prepopulate with CP=80, Sneasel's stats (189, 146, 146), Best Great League IVs = 0/15/15, Best Ultra League IVs = 15/15/15:</strong>
-    <div>
-      <a href="?cp=80&attack=189&defense=146&stamina=146&gl_ivs=0/15/15&ul_ivs=15/15/15">
-        ?cp=80&attack=189&defense=146&stamina=146&gl_ivs=0/15/15&ul_ivs=15/15/15
-      </a>
-    </div>
   </div>
 
 <script>
@@ -314,6 +294,34 @@ function parseUrlParams() {
     if (ulVal !== null) document.getElementById('ul-ivs').value = ulVal;
 }
 
+/**
+ * Updates the URL query parameters based on current form inputs,
+ * without reloading the page.
+ */
+function updateUrlParams() {
+    const params = new URLSearchParams();
+
+    // Gather current values
+    const cpVal = document.getElementById('cp').value.trim();
+    const atkVal = document.getElementById('attack').value.trim();
+    const defVal = document.getElementById('defense').value.trim();
+    const staVal = document.getElementById('stamina').value.trim();
+    const glVal = document.getElementById('gl-ivs').value.trim();
+    const ulVal = document.getElementById('ul-ivs').value.trim();
+
+    // Set or delete each parameter only if there is a value
+    if (cpVal)  params.set('cp', cpVal);
+    if (atkVal) params.set('attack', atkVal);
+    if (defVal) params.set('defense', defVal);
+    if (staVal) params.set('stamina', staVal);
+    if (glVal)  params.set('gl_ivs', glVal);
+    if (ulVal)  params.set('ul_ivs', ulVal);
+
+    // Replace the current history state with the updated query string
+    const newUrl = window.location.pathname + '?' + params.toString();
+    history.replaceState({}, '', newUrl);
+}
+
 document.getElementById('calculateBtn').addEventListener('click', () => {
     const cp = parseInt(document.getElementById('cp').value, 10);
     const attack = parseInt(document.getElementById('attack').value, 10);
@@ -371,6 +379,11 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
     tableHtml += '</table>';
 
     resultsContainer.innerHTML = tableHtml;
+});
+
+// Attach event listeners for input changes so that the URL updates each time
+['cp','attack','defense','stamina','gl-ivs','ul-ivs'].forEach(id => {
+  document.getElementById(id).addEventListener('input', updateUrlParams);
 });
 
 // Parse URL parameters on page load
