@@ -124,23 +124,27 @@ function levelAdjusted(stats, doubled_level) {
 }
 
 function findPossibleLevelsAndIVs(baseAttack, baseDefense, baseStamina, targetCP) {
+  const raidMode = document.getElementById('raidCheckbox').checked;
   let results = [];
+  // If raidMode is on, only check doubled_level 40 (Level 20) and 50 (Level 25).
+  const levels = raidMode ? [40, 50] : [...Array(69).keys()].map(i => i + 2);
+
   for (let attackIV = 0; attackIV <= 15; attackIV++) {
-      for (let defenseIV = 0; defenseIV <= 15; defenseIV++) {
-          for (let staminaIV = 0; staminaIV <= 15; staminaIV++) {
-              for (let doubled_level = 2; doubled_level <= 70; doubled_level++) {
-                  const combinedStats = withIVs(baseAttack, baseDefense, baseStamina, attackIV, defenseIV, staminaIV);
-                  const adjStats = levelAdjusted(combinedStats, doubled_level);
-                  const calcCP = cpFormula(adjStats.attack, adjStats.defense, adjStats.stamina);
-                  if (calcCP === targetCP) {
-                      results.push({
-                          level: doubled_level / 2,
-                          IVs: `${attackIV}/${defenseIV}/${staminaIV}`
-                      });
-                  }
-              }
+    for (let defenseIV = 0; defenseIV <= 15; defenseIV++) {
+      for (let staminaIV = 0; staminaIV <= 15; staminaIV++) {
+        for (const dl of levels) {
+          const combinedStats = withIVs(baseAttack, baseDefense, baseStamina, attackIV, defenseIV, staminaIV);
+          const adjStats = levelAdjusted(combinedStats, dl);
+          const calcCP = cpFormula(adjStats.attack, adjStats.defense, adjStats.stamina);
+          if (calcCP === targetCP) {
+            results.push({
+              level: dl / 2,
+              IVs: `${attackIV}/${defenseIV}/${staminaIV}`
+            });
           }
+        }
       }
+    }
   }
   return results;
 }
