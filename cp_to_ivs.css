@@ -9,6 +9,7 @@ body {
 
 h1 {
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .input-section, .results-section {
@@ -96,4 +97,9 @@ h1 {
 
 .autoComplete_wrapper {
   margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 15px 0;
 }
