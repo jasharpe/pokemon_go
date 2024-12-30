@@ -189,6 +189,8 @@ function updateUrlParams() {
   // Replace the current history state with the updated query string
   const newUrl = window.location.pathname + '?' + params.toString();
   history.replaceState({}, '', newUrl);
+
+  document.getElementById('calculateBtn').click();
 }
 
 let precomputedCombos = null;
