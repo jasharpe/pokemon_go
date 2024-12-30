@@ -1,0 +1,39 @@
+{{Notice|This page is the list of all Pokémon by their statistics. The maximum [[CP]] and [[Pokémon#Hit Points|HP]] refer to a level 50 Pokémon having perfect [[Individual Values]]. Best [[Buddy]] boost is not taken into account.<br>There are also: [[List of Pokémon|simplified list of Pokémon]] and [[list of Pokémon by Pokédex data]].<br>For more information about such creatures as Pokémon, see: ''[[Pokémon]]''.<br>For information on the game element that stores data about Pokémon in the game, see: ''[[Pokédex]]''.}}
+:''You can sort the table by clicking on the each column header.''
+{| class="pogo-legacy-table centered sortable widthbp100"
+! class="h3 brtl brbl" style="width: 50px !important;" | Pokédex number
+! class="h3" style="width: 120px !important;" | Pokémon
+! class="h3" | Types
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Attack
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Defense
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Stamina
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Max. CP
+! class="h3 brtr brbr" data-sort-type="number" style="width: 90px !important;" | Max. HP
+{{PTS|0001|Bulbasaur|Grass|Poison|a=118|d=111|s=128}}
+{{PTS|0002|Ivysaur|Grass|Poison|a=151|d=143|s=155}}
+{{PTS|0003|Venusaur|Grass|Poison|a=198|d=189|s=190}}
+{{PTS|0003|Venusaur#Mega|ci=Venusaur mega|cl=Mega Venusaur|Grass|Poison|a=241|d=246|s=190}}
+{{PTS|0004|Charmander|Fire|a=116|d=93|s=118}}
+{{PTS|0005|Charmeleon|Fire|a=158|d=126|s=151}}
+{{PTS|0006|Charizard|Fire|Flying|a=223|d=173|s=186}}
+{{PTS|0006|Charizard#Mega X|ci=Charizard x mega|cl=Mega Charizard X|Fire|Dragon|a=273|d=213|s=186}}
+{{PTS|0006|Charizard#Mega Y|ci=Charizard y mega|cl=Mega Charizard Y|Fire|Flying|a=319|d=212|s=186}}
+{{PTS|0007|Squirtle|Water|a=94|d=121|s=127}}
+{{PTS|0008|Wartortle|Water|a=126|d=155|s=153}}
+{{PTS|0009|Blastoise|Water|a=171|d=207|s=188}}
+{{PTS|0009|Blastoise#Mega|ci=Blastoise mega|cl=Mega Blastoise|Water|a=264|d=237|s=188}}
+{{PTS|0010|Caterpie|Bug|a=55|d=55|s=128}}
+{{PTS|0011|Metapod|Bug|a=45|d=80|s=137}}
+{{PTS|0012|Butterfree|Bug|Flying|a=167|d=137|s=155}}
+{{PTS|0013|Weedle|Bug|Poison|a=63|d=50|s=120}}
+{{PTS|0014|Kakuna|Bug|Poison|a=46|d=75|s=128}}
+{{PTS|0015|Beedrill|Bug|Poison|a=169|d=130|s=163}}
+{{PTS|0015|Beedrill#Mega|ci=Beedrill mega|cl=Mega Beedrill|Bug|Poison|a=303|d=148|s=163}}
+{{PTS|0016|Pidgey|Normal|Flying|a=85|d=73|s=120}}
+{{PTS|0017|Pidgeotto|Normal|Flying|a=117|d=105|s=160}}
+{{PTS|0018|Pidgeot|Normal|Flying|a=166|d=154|s=195}}
+{{PTS|0018|Pidgeot#Mega|ci=Pidgeot mega|cl=Mega Pidgeot|Normal|Flying|a=280|d=175|s=195}}
+{{PTS|0019|Rattata|Normal|a=103|d=70|s=102}}
+{{PTS|0019|Rattata|ci=Rattata alolan|cl=Alolan Rattata|Dark|Normal|a=103|d=70|s=102}}
+|}
+[[Category:Listings]]

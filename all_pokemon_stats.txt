@@ -1,0 +1,1018 @@
+{{Notice|This page is the list of all Pokémon by their statistics. The maximum [[CP]] and [[Pokémon#Hit Points|HP]] refer to a level 50 Pokémon having perfect [[Individual Values]]. Best [[Buddy]] boost is not taken into account.<br>There are also: [[List of Pokémon|simplified list of Pokémon]] and [[list of Pokémon by Pokédex data]].<br>For more information about such creatures as Pokémon, see: ''[[Pokémon]]''.<br>For information on the game element that stores data about Pokémon in the game, see: ''[[Pokédex]]''.}}
+:''You can sort the table by clicking on the each column header.''
+{| class="pogo-legacy-table centered sortable widthbp100"
+! class="h3 brtl brbl" style="width: 50px !important;" | Pokédex number
+! class="h3" style="width: 120px !important;" | Pokémon
+! class="h3" | Types
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Attack
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Defense
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Stamina
+! class="h3" data-sort-type="number" style="width: 90px !important;" | Max. CP
+! class="h3 brtr brbr" data-sort-type="number" style="width: 90px !important;" | Max. HP
+{{PTS|0001|Bulbasaur|Grass|Poison|a=118|d=111|s=128}}
+{{PTS|0002|Ivysaur|Grass|Poison|a=151|d=143|s=155}}
+{{PTS|0003|Venusaur|Grass|Poison|a=198|d=189|s=190}}
+{{PTS|0003|Venusaur#Mega|ci=Venusaur mega|cl=Mega Venusaur|Grass|Poison|a=241|d=246|s=190}}
+{{PTS|0004|Charmander|Fire|a=116|d=93|s=118}}
+{{PTS|0005|Charmeleon|Fire|a=158|d=126|s=151}}
+{{PTS|0006|Charizard|Fire|Flying|a=223|d=173|s=186}}
+{{PTS|0006|Charizard#Mega X|ci=Charizard x mega|cl=Mega Charizard X|Fire|Dragon|a=273|d=213|s=186}}
+{{PTS|0006|Charizard#Mega Y|ci=Charizard y mega|cl=Mega Charizard Y|Fire|Flying|a=319|d=212|s=186}}
+{{PTS|0007|Squirtle|Water|a=94|d=121|s=127}}
+{{PTS|0008|Wartortle|Water|a=126|d=155|s=153}}
+{{PTS|0009|Blastoise|Water|a=171|d=207|s=188}}
+{{PTS|0009|Blastoise#Mega|ci=Blastoise mega|cl=Mega Blastoise|Water|a=264|d=237|s=188}}
+{{PTS|0010|Caterpie|Bug|a=55|d=55|s=128}}
+{{PTS|0011|Metapod|Bug|a=45|d=80|s=137}}
+{{PTS|0012|Butterfree|Bug|Flying|a=167|d=137|s=155}}
+{{PTS|0013|Weedle|Bug|Poison|a=63|d=50|s=120}}
+{{PTS|0014|Kakuna|Bug|Poison|a=46|d=75|s=128}}
+{{PTS|0015|Beedrill|Bug|Poison|a=169|d=130|s=163}}
+{{PTS|0015|Beedrill#Mega|ci=Beedrill mega|cl=Mega Beedrill|Bug|Poison|a=303|d=148|s=163}}
+{{PTS|0016|Pidgey|Normal|Flying|a=85|d=73|s=120}}
+{{PTS|0017|Pidgeotto|Normal|Flying|a=117|d=105|s=160}}
+{{PTS|0018|Pidgeot|Normal|Flying|a=166|d=154|s=195}}
+{{PTS|0018|Pidgeot#Mega|ci=Pidgeot mega|cl=Mega Pidgeot|Normal|Flying|a=280|d=175|s=195}}
+{{PTS|0019|Rattata|Normal|a=103|d=70|s=102}}
+{{PTS|0019|Rattata|ci=Rattata alolan|cl=Alolan Rattata|Dark|Normal|a=103|d=70|s=102}}
+{{PTS|0020|Raticate|Normal|a=161|d=139|s=146}}
+{{PTS|0020|Raticate|ci=Raticate alolan|cl=Alolan Raticate|Dark|Normal|a=135|d=154|s=181}}
+{{PTS|0021|Spearow|Normal|Flying|a=112|d=60|s=120}}
+{{PTS|0022|Fearow|Normal|Flying|a=182|d=133|s=163}}
+{{PTS|0023|Ekans|Poison|a=110|d=97|s=111}}
+{{PTS|0024|Arbok|Poison|a=167|d=153|s=155}}
+{{PTS|0025|Pikachu|Electric|a=112|d=96|s=111}}
+{{PTS|0026|Raichu|Electric|a=193|d=151|s=155}}
+{{PTS|0026|Raichu|ci=Raichu alolan|cl=Alolan Raichu|Electric|Psychic|a=201|d=154|s=155}}
+{{PTS|0027|Sandshrew|Ground|a=126|d=120|s=137}}
+{{PTS|0027|Sandshrew|ci=Sandshrew alolan|cl=Alolan Sandshrew|Ice|Steel|a=125|d=129|s=137}}
+{{PTS|0028|Sandslash|Ground|a=182|d=175|s=181}}
+{{PTS|0028|Sandslash|ci=Sandslash alolan|cl=Alolan Sandslash|Ice|Steel|a=177|d=195|s=181}}
+{{PTS|0029|Nidoran♀|Poison|a=86|d=89|s=146}}
+{{PTS|0030|Nidorina|Poison|a=117|d=120|s=172}}
+{{PTS|0031|Nidoqueen|Poison|Ground|a=180|d=173|s=207}}
+{{PTS|0032|Nidoran♂|Poison|a=105|d=76|s=130}}
+{{PTS|0033|Nidorino|Poison|a=137|d=111|s=156}}
+{{PTS|0034|Nidoking|Poison|Ground|a=204|d=156|s=191}}
+{{PTS|0035|Clefairy|Fairy|a=107|d=108|s=172}}
+{{PTS|0036|Clefable|Fairy|a=178|d=162|s=216}}
+{{PTS|0037|Vulpix|Fire|a=96|d=109|s=116}}
+{{PTS|0037|Vulpix|ci=Vulpix alolan|cl=Alolan Vulpix|Ice|a=96|d=109|s=116}}
+{{PTS|0038|Ninetales|Fire|a=169|d=190|s=177}}
+{{PTS|0038|Ninetales|ci=Ninetales alolan|cl=Alolan Ninetales|Ice|Fairy|a=170|d=193|s=177|}}
+{{PTS|0039|Jigglypuff|Normal|Fairy|a=80|d=41|s=251}}
+{{PTS|0040|Wigglytuff|Normal|Fairy|a=156|d=90|s=295}}
+{{PTS|0041|Zubat|Poison|Flying|a=83|d=73|s=120}}
+{{PTS|0042|Golbat|Poison|Flying|a=161|d=150|s=181}}
+{{PTS|0043|Oddish|Grass|Poison|a=131|d=112|s=128}}
+{{PTS|0044|Gloom|Grass|Poison|a=153|d=136|s=155}}
+{{PTS|0045|Vileplume|Grass|Poison|a=202|d=167|s=181}}
+{{PTS|0046|Paras|Bug|Grass|a=121|d=99|s=111}}
+{{PTS|0047|Parasect|Bug|Grass|a=165|d=146|s=155}}
+{{PTS|0048|Venonat|Bug|Poison|a=100|d=100|s=155}}
+{{PTS|0049|Venomoth|Bug|Poison|a=179|d=143|s=172}}
+{{PTS|0050|Diglett|Ground|a=109|d=78|s=67}}
+{{PTS|0050|Diglett|ci=Diglett alolan|cl=Alolan Diglett|Ground|Steel|a=109|d=82|s=67}}
+{{PTS|0051|Dugtrio|Ground|a=167|d=134|s=111}}
+{{PTS|0051|Dugtrio|ci=Dugtrio alolan|cl=Alolan Dugtrio|Ground|Steel|a=201|d=145|s=111}}
+{{PTS|0052|Meowth|Normal|a=92|d=78|s=120}}
+{{PTS|0052|Meowth|ci=Meowth alolan|cl=Alolan Meowth|Dark|a=99|d=78|s=120}}
+{{PTS|0052|Meowth|ci=Meowth galarian|cl=Galarian Meowth|Steel|a=115|d=92|s=137}}
+{{PTS|0053|Persian|Normal|a=150|d=136|s=163}}
+{{PTS|0053|Persian|ci=Persian alolan|cl=Alolan Persian|Dark|a=158|d=136|s=163}}
+{{PTS|0054|Psyduck|Water|a=122|d=95|s=137}}
+{{PTS|0055|Golduck|Water|a=191|d=162|s=190}}
+{{PTS|0056|Mankey|Fighting|a=148|d=82|s=120}}
+{{PTS|0057|Primeape|Fighting|a=207|d=138|s=163}}
+{{PTS|0058|Growlithe|Fire|a=136|d=93|s=146}}
+{{PTS|0058|Growlithe|ci=Growlithe hisuian|cl=Hisuian Growlithe|Fire|Rock|a=142|d=92|s=155}}
+{{PTS|0059|Arcanine|Fire|a=227|d=166|s=207}}
+{{PTS|0059|Arcanine|ci=Arcanine hisuian|cl=Hisuian Arcanine|Fire|Rock|a=232|d=165|s=216}}
+{{PTS|0060|Poliwag|Water|a=101|d=82|s=120}}
+{{PTS|0061|Poliwhirl|Water|a=130|d=123|s=163}}
+{{PTS|0062|Poliwrath|Water|Fighting|a=182|d=184|s=207}}
+{{PTS|0063|Abra|Psychic|a=195|d=82|s=93}}
+{{PTS|0064|Kadabra|Psychic|a=232|d=117|s=120}}
+{{PTS|0065|Alakazam|Psychic|a=271|d=167|s=146}}
+{{PTS|0065|Alakazam#Mega|ci=Alakazam mega|cl=Mega Alakazam|Psychic|a=367|d=207|s=146}}
+{{PTS|0066|Machop|Fighting|a=137|d=82|s=172}}
+{{PTS|0067|Machoke|Fighting|a=177|d=125|s=190}}
+{{PTS|0068|Machamp|Fighting|a=234|d=159|s=207}}
+{{PTS|0069|Bellsprout|Grass|Poison|a=139|d=61|s=137}}
+{{PTS|0070|Weepinbell|Grass|Poison|a=172|d=92|s=163}}
+{{PTS|0071|Victreebel|Grass|Poison|a=207|d=135|s=190}}
+{{PTS|0072|Tentacool|Water|Poison|a=97|d=149|s=120}}
+{{PTS|0073|Tentacruel|Water|Poison|a=166|d=209|s=190}}
+{{PTS|0074|Geodude|Rock|Ground|a=132|d=132|s=120}}
+{{PTS|0074|Geodude|ci=Geodude alolan|cl=Alolan Geodude|Rock|Electric|a=132|d=132|s=120}}
+{{PTS|0075|Graveler|Rock|Ground|a=164|d=164|s=146}}
+{{PTS|0075|Graveler|ci=Graveler alolan|cl=Alolan Graveler|Rock|Electric|a=164|d=164|s=146}}
+{{PTS|0076|Golem|Rock|Ground|a=211|d=198|s=190}}
+{{PTS|0076|Golem|ci=Golem alolan|cl=Alolan Golem|Rock|Electric|a=211|d=198|s=190}}
+{{PTS|0077|Ponyta|Fire|a=170|d=127|s=137}}
+{{PTS|0077|Ponyta|ci=Ponyta galarian|cl=Galarian Ponyta|Psychic|a=170|d=127|s=137}}
+{{PTS|0078|Rapidash|Fire|a=207|d=162|s=163}}
+{{PTS|0078|Rapidash|ci=Rapidash galarian|cl=Galarian Rapidash|Psychic|Fairy|a=207|d=162|s=163}}
+{{PTS|0079|Slowpoke|Water|Psychic|a=109|d=98|s=207}}
+{{PTS|0079|Slowpoke|ci=Slowpoke galarian|cl=Galarian Slowpoke|Psychic|a=109|d=98|s=207}}
+{{PTS|0080|Slowbro|Water|Psychic|a=177|d=180|s=216}}
+{{PTS|0080|Slowbro#Mega|ci=Slowbro mega|cl=Mega Slowbro|Water|Psychic|a=224|d=259|s=216}}
+{{PTS|0080|Slowbro|ci=Slowbro galarian|cl=Galarian Slowbro|Poison|Psychic|a=182|d=156|s=216}}
+{{PTS|0081|Magnemite|Electric|Steel|a=165|d=121|s=93}}
+{{PTS|0082|Magneton|Electric|Steel|a=223|d=169|s=137}}
+{{PTS|0083|Farfetch'd|Normal|Flying|a=124|d=115|s=141}}
+{{PTS|0083|Farfetch'd|ci=Farfetch'd galarian|cl=Galarian Farfetch'd|Fighting|a=174|d=114|s=141}}
+{{PTS|0084|Doduo|Normal|Flying|a=158|d=83|s=111}}
+{{PTS|0085|Dodrio|Normal|Flying|a=218|d=140|s=155}}
+{{PTS|0086|Seel|Water|a=85|d=121|s=163}}
+{{PTS|0087|Dewgong|Water|Ice|a=139|d=177|s=207}}
+{{PTS|0088|Grimer|Poison|a=135|d=90|s=190}}
+{{PTS|0088|Grimer|ci=Grimer alolan|cl=Alolan Grimer|Poison|Dark|a=135|d=90|s=190}}
+{{PTS|0089|Muk|Poison|a=190|d=172|s=233}}
+{{PTS|0089|Muk|ci=Muk alolan|cl=Alolan Muk|Poison|Dark|a=190|d=172|s=233}}
+{{PTS|0090|Shellder|Water|a=116|d=134|s=102}}
+{{PTS|0091|Cloyster|Water|Ice|a=186|d=256|s=137}}
+{{PTS|0092|Gastly|Ghost|Poison|a=186|d=67|s=102}}
+{{PTS|0093|Haunter|Ghost|Poison|a=223|d=107|s=128}}
+{{PTS|0094|Gengar|Ghost|Poison|a=261|d=149|s=155}}
+{{PTS|0094|Gengar#Mega|ci=Gengar mega|cl=Mega Gengar|Ghost|Poison|a=349|d=199|s=155}}
+{{PTS|0095|Onix|Rock|Ground|a=85|d=232|s=111}}
+{{PTS|0096|Drowzee|Psychic|a=89|d=136|s=155}}
+{{PTS|0097|Hypno|Psychic|a=144|d=193|s=198}}
+{{PTS|0098|Krabby|Water|a=181|d=124|s=102}}
+{{PTS|0099|Kingler|Water|a=240|d=181|s=146}}
+{{PTS|0100|Voltorb|Electric|a=109|d=111|s=120}}
+{{PTS|0100|Voltorb|ci=Voltorb hisuian|cl=Hisuian Voltorb|Electric|Grass|a=109|d=111|s=120}}
+{{PTS|0101|Electrode|Electric|a=173|d=173|s=155}}
+{{PTS|0101|Electrode|ci=Electrode hisuian|cl=Hisuian Electrode|Electric|Grass|a=176|d=176|s=155}}
+{{PTS|0102|Exeggcute|Grass|Psychic|a=107|d=125|s=155}}
+{{PTS|0103|Exeggutor|Grass|Psychic|a=233|d=149|s=216}}
+{{PTS|0103|Exeggutor|ci=Exeggutor alolan|cl=Alolan Exeggutor|Grass|Dragon|a=230|d=153|s=216}}
+{{PTS|0104|Cubone|Ground|a=90|d=144|s=137}}
+{{PTS|0105|Marowak|Ground|a=144|d=186|s=155}}
+{{PTS|0105|Marowak|ci=Marowak alolan|cl=Alolan Marowak|Fire|Ghost|a=144|d=186|s=155}}
+{{PTS|0106|Hitmonlee|Fighting|a=224|d=181|s=137}}
+{{PTS|0107|Hitmonchan|Fighting|a=193|d=197|s=137}}
+{{PTS|0108|Lickitung|Normal|a=108|d=137|s=207}}
+{{PTS|0109|Koffing|Poison|a=119|d=141|s=120}}
+{{PTS|0110|Weezing|Poison|a=174|d=197|s=163}}
+{{PTS|0110|Weezing|ci=Weezing galarian|cl=Galarian Weezing|Poison|Fairy|a=174|d=197|s=163}}
+{{PTS|0111|Rhyhorn|Ground|Rock|a=140|d=127|s=190}}
+{{PTS|0112|Rhydon|Ground|Rock|a=222|d=171|s=233}}
+{{PTS|0113|Chansey|Normal|a=60|d=128|s=487}}
+{{PTS|0114|Tangela|Grass|a=183|d=169|s=163}}
+{{PTS|0115|Kangaskhan|Normal|a=181|d=165|s=233}}
+{{PTS|0115|Kangaskhan#Mega|ci=Kangaskhan mega|cl=Mega Kangaskhan|Normal|a=246|d=210|s=233}}
+{{PTS|0116|Horsea|Water|a=129|d=103|s=102}}
+{{PTS|0117|Seadra|Water|a=187|d=156|s=146}}
+{{PTS|0118|Goldeen|Water|a=123|d=110|s=128}}
+{{PTS|0119|Seaking|Water|a=175|d=147|s=190}}
+{{PTS|0120|Staryu|Water|a=137|d=112|s=102}}
+{{PTS|0121|Starmie|Water|Psychic|a=210|d=184|s=155}}
+{{PTS|0122|Mr. Mime|Psychic|Fairy|a=192|d=205|s=120}}
+{{PTS|0122|Mr. Mime|ci=Mr. Mime galarian|cl=Galarian Mr. Mime|Ice|Psychic|a=183|d=169|s=137}}
+{{PTS|0123|Scyther|Bug|Flying|a=218|d=170|s=172}}
+{{PTS|0124|Jynx|Ice|Psychic|a=223|d=151|s=163}}
+{{PTS|0125|Electabuzz|Electric|a=198|d=158|s=163}}
+{{PTS|0126|Magmar|Fire|a=206|d=154|s=163}}
+{{PTS|0127|Pinsir|Bug|a=238|d=182|s=163}}
+{{PTS|0127|Pinsir#Mega|ci=Pinsir mega|cl=Mega Pinsir|Bug|Flying|a=305|d=231|s=163}}
+{{PTS|0128|Tauros|Normal|a=198|d=183|s=181}}
+{{PTS|0129|Magikarp|Water|a=29|d=85|s=85}}
+{{PTS|0130|Gyarados|Water|Flying|a=237|d=186|s=216}}
+{{PTS|0130|Gyarados#Mega|ci=Gyarados mega|cl=Mega Gyarados|Water|Dark|a=292|d=247|s=216}}
+{{PTS|0131|Lapras|Water|Ice|a=165|d=174|s=277}}
+{{PTS|0132|Ditto|Normal|a=91|d=91|s=134}}
+{{PTS|0133|Eevee|Normal|a=104|d=114|s=146}}
+{{PTS|0134|Vaporeon|Water|a=205|d=161|s=277}}
+{{PTS|0135|Jolteon|Electric|a=232|d=182|s=163}}
+{{PTS|0136|Flareon|Fire|a=246|d=179|s=163}}
+{{PTS|0137|Porygon|Normal|a=153|d=136|s=163}}
+{{PTS|0138|Omanyte|Rock|Water|a=155|d=153|s=111}}
+{{PTS|0139|Omastar|Rock|Water|a=207|d=201|s=172}}
+{{PTS|0140|Kabuto|Rock|Water|a=148|d=140|s=102}}
+{{PTS|0141|Kabutops|Rock|Water|a=220|d=186|s=155}}
+{{PTS|0142|Aerodactyl|Rock|Flying|a=221|d=159|s=190}}
+{{PTS|0142|Aerodactyl#Mega|ci=Aerodactyl mega|cl=Mega Aerodactyl|Rock|Flying|a=292|d=210|s=190}}
+{{PTS|0143|Snorlax|Normal|a=190|d=169|s=330}}
+{{PTS|0144|Articuno|Ice|Flying|a=192|d=236|s=207}}
+{{PTS|0144|Articuno|ci=Articuno galarian|cl=Galarian Articuno|Psychic|Flying|a=250|d=197|s=207}}
+{{PTS|0145|Zapdos|Electric|Flying|a=253|d=185|s=207}}
+{{PTS|0145|Zapdos|ci=Zapdos galarian|cl=Galarian Zapdos|Fighting|Flying|a=252|d=189|s=207}}
+{{PTS|0146|Moltres|Fire|Flying|a=251|d=181|s=207}}
+{{PTS|0146|Moltres|ci=Moltres galarian|cl=Galarian Moltres|Dark|Flying|a=202|d=231|s=207}}
+{{PTS|0147|Dratini|Dragon|a=119|d=91|s=121}}
+{{PTS|0148|Dragonair|Dragon|a=163|d=135|s=156}}
+{{PTS|0149|Dragonite|Dragon|Flying|a=263|d=198|s=209}}
+{{PTS|0150|Mewtwo|Psychic|a=300|d=182|s=214}}
+{{PTS|0150|Mewtwo|ci=Mewtwo armored|cl=Armored Mewtwo|Psychic|a=182|d=278|s=214}}
+{{PTS|0151|Mew|Psychic|a=210|d=210|s=225}}
+{{PTS|0152|Chikorita|Grass|a=92|d=122|s=128}}
+{{PTS|0153|Bayleef|Grass|a=122|d=155|s=155}}
+{{PTS|0154|Meganium|Grass|a=168|d=202|s=190}}
+{{PTS|0155|Cyndaquil|Fire|a=116|d=93|s=118}}
+{{PTS|0156|Quilava|Fire|a=158|d=126|s=151}}
+{{PTS|0157|Typhlosion|Fire|a=223|d=173|s=186}}
+{{PTS|0157|Typhlosion|ci=Typhlosion hisuian|cl=Hisuian Typhlosion|Fire|Ghost|a=238|d=172|s=177}}
+{{PTS|0158|Totodile|Water|a=117|d=109|s=137}}
+{{PTS|0159|Croconaw|Water|a=150|d=142|s=163}}
+{{PTS|0160|Feraligatr|Water|a=205|d=188|s=198}}
+{{PTS|0161|Sentret|Normal|a=79|d=73|s=111}}
+{{PTS|0162|Furret|Normal|a=148|d=125|s=198}}
+{{PTS|0163|Hoothoot|Normal|Flying|a=67|d=88|s=155}}
+{{PTS|0164|Noctowl|Normal|Flying|a=145|d=156|s=225}}
+{{PTS|0165|Ledyba|Bug|Flying|a=72|d=118|s=120}}
+{{PTS|0166|Ledian|Bug|Flying|a=107|d=179|s=146}}
+{{PTS|0167|Spinarak|Bug|Poison|a=105|d=73|s=120}}
+{{PTS|0168|Ariados|Bug|Poison|a=161|d=124|s=172}}
+{{PTS|0169|Crobat|Poison|Flying|a=194|d=178|s=198}}
+{{PTS|0170|Chinchou|Water|Electric|a=106|d=97|s=181}}
+{{PTS|0171|Lanturn|Water|Electric|a=146|d=137|s=268}}
+{{PTS|0172|Pichu|Electric|a=77|d=53|s=85}}
+{{PTS|0173|Cleffa|Fairy|a=75|d=79|s=137}}
+{{PTS|0174|Igglybuff|Normal|Fairy|a=69|d=32|s=207}}
+{{PTS|0175|Togepi|Fairy|a=67|d=116|s=111}}
+{{PTS|0176|Togetic|Fairy|Flying|a=139|d=181|s=146}}
+{{PTS|0177|Natu|Psychic|Flying|a=134|d=89|s=120}}
+{{PTS|0178|Xatu|Psychic|Flying|a=192|d=146|s=163}}
+{{PTS|0179|Mareep|Electric|a=114|d=79|s=146}}
+{{PTS|0180|Flaaffy|Electric|a=145|d=109|s=172}}
+{{PTS|0181|Ampharos|Electric|a=211|d=169|s=207}}
+{{PTS|0181|Ampharos#Mega|ci=Ampharos mega|cl=Mega Ampharos|Electric|Dragon|a=294|d=203|s=207}}
+{{PTS|0182|Bellossom|Grass|a=169|d=186|s=181}}
+{{PTS|0183|Marill|Water|Fairy|a=37|d=93|s=172}}
+{{PTS|0184|Azumarill|Water|Fairy|a=112|d=152|s=225}}
+{{PTS|0185|Sudowoodo|Rock|a=167|d=176|s=172}}
+{{PTS|0186|Politoed|Water|a=174|d=179|s=207}}
+{{PTS|0187|Hoppip|Grass|Flying|a=67|d=94|s=111}}
+{{PTS|0188|Skiploom|Grass|Flying|a=91|d=120|s=146}}
+{{PTS|0189|Jumpluff|Grass|Flying|a=118|d=183|s=181}}
+{{PTS|0190|Aipom|Normal|a=136|d=112|s=146}}
+{{PTS|0191|Sunkern|Grass|a=55|d=55|s=102}}
+{{PTS|0192|Sunflora|Grass|a=185|d=135|s=181}}
+{{PTS|0193|Yanma|Bug|Flying|a=154|d=94|s=163}}
+{{PTS|0194|Wooper|Water|Ground|a=75|d=66|s=146}}
+{{PTS|0194|Wooper|ci=Wooper paldean|cl=Paldean Wooper|Poison|Ground|a=75|d=66|s=146}}
+{{PTS|0195|Quagsire|Water|Ground|a=152|d=143|s=216}}
+{{PTS|0196|Espeon|Psychic|a=261|d=175|s=163}}
+{{PTS|0197|Umbreon|Dark|a=126|d=240|s=216}}
+{{PTS|0198|Murkrow|Dark|Flying|a=175|d=87|s=155}}
+{{PTS|0199|Slowking|Water|Psychic|a=177|d=180|s=216}}
+{{PTS|0199|Slowking|ci=Slowking galarian|cl=Galarian Slowking|Poison|Psychic|a=190|d=180|s=216}}
+{{PTS|0200|Misdreavus|Ghost|a=167|d=154|s=155}}
+{{PTS|0201|Unown|Psychic|a=136|d=91|s=134}}
+{{PTS|0202|Wobbuffet|Psychic|a=60|d=106|s=382}}
+{{PTS|0203|Girafarig|Normal|Psychic|a=182|d=133|s=172}}
+{{PTS|0204|Pineco|Bug|a=108|d=122|s=137}}
+{{PTS|0205|Forretress|Bug|Steel|a=161|d=205|s=181}}
+{{PTS|0206|Dunsparce|Normal|a=131|d=128|s=225}}
+{{PTS|0207|Gligar|Ground|Flying|a=143|d=184|s=163}}
+{{PTS|0208|Steelix|Steel|Ground|a=148|d=272|s=181}}
+{{PTS|0208|Steelix#Mega|ci=Steelix mega|cl=Mega Steelix|Steel|Ground|a=212|d=327|s=181}}
+{{PTS|0209|Snubbull|Fairy|a=137|d=85|s=155}}
+{{PTS|0210|Granbull|Fairy|a=212|d=131|s=207}}
+{{PTS|0211|Qwilfish|Water|Poison|a=184|d=138|s=163}}
+{{PTS|0211|Qwilfish|ci=Qwilfish hisuian|cl=Hisuian Qwilfish|Dark|Poison|a=184|d=151|s=163}}
+{{PTS|0212|Scizor|Bug|Steel|a=236|d=181|s=172}}
+{{PTS|0212|Scizor#Mega|ci=Scizor mega|cl=Mega Scizor|Bug|Steel|a=279|d=250|s=172}}
+{{PTS|0213|Shuckle|Bug|Rock|a=17|d=396|s=85}}
+{{PTS|0214|Heracross|Bug|Fighting|a=234|d=179|s=190}}
+{{PTS|0214|Heracross#Mega|ci=Heracross mega|cl=Mega Heracross|Bug|Fighting|a=334|d=223|s=190}}
+{{PTS|0215|Sneasel|Dark|Ice|a=189|d=146|s=146}}
+{{PTS|0215|Sneasel|ci=Sneasel hisuian|cl=Hisuian Sneasel|Fighting|Poison|a=189|d=146|s=146}}
+{{PTS|0216|Teddiursa|Normal|a=142|d=93|s=155}}
+{{PTS|0217|Ursaring|Normal|a=236|d=144|s=207}}
+{{PTS|0218|Slugma|Fire|a=118|d=71|s=120}}
+{{PTS|0219|Magcargo|Fire|Rock|a=139|d=191|s=137}}
+{{PTS|0220|Swinub|Ice|Ground|a=90|d=69|s=137}}
+{{PTS|0221|Piloswine|Ice|Ground|a=181|d=138|s=225}}
+{{PTS|0222|Corsola|Water|Rock|a=118|d=156|s=146}}
+{{PTS|0222|Corsola|ci=Corsola galarian|cl=Galarian Corsola|Ghost|a=116|d=182|s=155}}
+{{PTS|0223|Remoraid|Water|a=127|d=69|s=111}}
+{{PTS|0224|Octillery|Water|a=197|d=141|s=181}}
+{{PTS|0225|Delibird|Ice|Flying|a=128|d=90|s=128}}
+{{PTS|0226|Mantine|Water|Flying|a=148|d=226|s=163}}
+{{PTS|0227|Skarmory|Steel|Flying|a=148|d=226|s=163}}
+{{PTS|0228|Houndour|Dark|Fire|a=152|d=83|s=128}}
+{{PTS|0229|Houndoom|Dark|Fire|a=224|d=144|s=181}}
+{{PTS|0229|Houndoom#Mega|ci=Houndoom mega|cl=Mega Houndoom|Dark|Fire|a=289|d=194|s=181}}
+{{PTS|0230|Kingdra|Water|Dragon|a=194|d=194|s=181}}
+{{PTS|0231|Phanpy|Ground|a=107|d=98|s=207}}
+{{PTS|0232|Donphan|Ground|a=214|d=185|s=207}}
+{{PTS|0233|Porygon2|Normal|a=198|d=180|s=198}}
+{{PTS|0234|Stantler|Normal|a=192|d=131|s=177}}
+{{PTS|0235|Smeargle|Normal|a=40|d=83|s=146}}
+{{PTS|0236|Tyrogue|Fighting|a=64|d=64|s=111}}
+{{PTS|0237|Hitmontop|Fighting|a=173|d=207|s=137}}
+{{PTS|0238|Smoochum|Ice|Psychic|a=153|d=91|s=128}}
+{{PTS|0239|Elekid|Electric|a=135|d=101|s=128}}
+{{PTS|0240|Magby|Fire|a=151|d=99|s=128}}
+{{PTS|0241|Miltank|Normal|a=157|d=193|s=216}}
+{{PTS|0242|Blissey|Normal|a=129|d=169|s=496}}
+{{PTS|0243|Raikou|Electric|a=241|d=195|s=207}}
+{{PTS|0244|Entei|Fire|a=235|d=171|s=251}}
+{{PTS|0245|Suicune|Water|a=180|d=235|s=225}}
+{{PTS|0246|Larvitar|Rock|Ground|a=115|d=93|s=137}}
+{{PTS|0247|Pupitar|Rock|Ground|a=155|d=133|s=172}}
+{{PTS|0248|Tyranitar|Rock|Dark|a=251|d=207|s=225}}
+{{PTS|0248|Tyranitar#Mega|ci=Tyranitar mega|cl=Mega Tyranitar|Rock|Dark|a=309|d=276|s=225}}
+{{PTS|0249|Lugia|Psychic|Flying|a=193|d=310|s=235}}
+{{PTS|0250|Ho-Oh|Fire|Flying|a=239|d=244|s=214}}
+{{PTS|0251|Celebi|Psychic|Grass|a=210|d=210|s=225}}
+{{PTS|0252|Treecko|Grass|a=124|d=94|s=120}}
+{{PTS|0253|Grovyle|Grass|a=172|d=120|s=137}}
+{{PTS|0254|Sceptile|Grass|a=223|d=169|s=172}}
+{{PTS|0254|Sceptile#Mega|ci=Sceptile mega|cl=Mega Sceptile|Grass|Dragon|a=320|d=186|s=172}}
+{{PTS|0255|Torchic|Fire|a=130|d=87|s=128}}
+{{PTS|0256|Combusken|Fire|Fighting|a=163|d=115|s=155}}
+{{PTS|0257|Blaziken|Fire|Fighting|a=240|d=141|s=190}}
+{{PTS|0257|Blaziken#Mega|ci=Blaziken mega|cl=Mega Blaziken|Fire|Fighting|a=329|d=168|s=190}}
+{{PTS|0258|Mudkip|Water|a=126|d=93|s=137}}
+{{PTS|0259|Marshtomp|Water|Ground|a=156|d=133|s=172}}
+{{PTS|0260|Swampert|Water|Ground|a=208|d=175|s=225}}
+{{PTS|0260|Swampert#Mega|ci=Swampert mega|cl=Mega Swampert|Water|Ground|a=283|d=218|s=225}}
+{{PTS|0261|Poochyena|Dark|a=96|d=61|s=111}}
+{{PTS|0262|Mightyena|Dark|a=171|d=132|s=172}}
+{{PTS|0263|Zigzagoon|Normal|a=58|d=80|s=116}}
+{{PTS|0263|Zigzagoon|ci=Zigzagoon galarian|cl=Galarian Zigzagoon|Dark|Normal|a=58|d=80|s=116}}
+{{PTS|0264|Linoone|Normal|a=142|d=128|s=186}}
+{{PTS|0264|Linoone|ci=Linoone galarian|cl=Galarian Linoone|Dark|Normal|a=142|d=128|s=186}}
+{{PTS|0265|Wurmple|Bug|a=75|d=59|s=128}}
+{{PTS|0266|Silcoon|Bug|a=60|d=77|s=137}}
+{{PTS|0267|Beautifly|Bug|Flying|a=189|d=98|s=155}}
+{{PTS|0268|Cascoon|Bug|a=60|d=77|s=137}}
+{{PTS|0269|Dustox|Bug|Poison|a=98|d=162|s=155}}
+{{PTS|0270|Lotad|Water|Grass|a=71|d=77|s=120}}
+{{PTS|0271|Lombre|Water|Grass|a=112|d=119|s=155}}
+{{PTS|0272|Ludicolo|Water|Grass|a=173|d=176|s=190}}
+{{PTS|0273|Seedot|Grass|a=71|d=77|s=120}}
+{{PTS|0274|Nuzleaf|Grass|Dark|a=134|d=78|s=172}}
+{{PTS|0275|Shiftry|Grass|Dark|a=200|d=121|s=207}}
+{{PTS|0276|Taillow|Normal|Flying|a=106|d=61|s=120}}
+{{PTS|0277|Swellow|Normal|Flying|a=185|d=124|s=155}}
+{{PTS|0278|Wingull|Water|Flying|a=106|d=61|s=120}}
+{{PTS|0279|Pelipper|Water|Flying|a=175|d=174|s=155}}
+{{PTS|0280|Ralts|Psychic|Fairy|a=79|d=59|s=99}}
+{{PTS|0281|Kirlia|Psychic|Fairy|a=117|d=90|s=116}}
+{{PTS|0282|Gardevoir|Psychic|Fairy|a=237|d=195|s=169}}
+{{PTS|0282|Gardevoir#Mega|ci=Gardevoir mega|cl=Mega Gardevoir|Psychic|Fairy|a=326|d=229|s=169}}
+{{PTS|0283|Surskit|Bug|Water|a=93|d=87|s=120}}
+{{PTS|0284|Masquerain|Bug|Flying|a=192|d=150|s=172}}
+{{PTS|0285|Shroomish|Grass|a=74|d=110|s=155}}
+{{PTS|0286|Breloom|Grass|Fighting|a=241|d=144|s=155}}
+{{PTS|0287|Slakoth|Normal|a=104|d=92|s=155}}
+{{PTS|0288|Vigoroth|Normal|a=159|d=145|s=190}}
+{{PTS|0289|Slaking|Normal|a=290|d=166|s=284}}
+{{PTS|0290|Nincada|Bug|Ground|a=80|d=126|s=104}}
+{{PTS|0291|Ninjask|Bug|Flying|a=199|d=112|s=156}}
+{{PTS|0292|Shedinja|Bug|Ghost|a=153|d=73|s=1}}
+{{PTS|0293|Whismur|Normal|a=92|d=42|s=162}}
+{{PTS|0294|Loudred|Normal|a=134|d=81|s=197}}
+{{PTS|0295|Exploud|Normal|a=179|d=137|s=232}}
+{{PTS|0296|Makuhita|Fighting|a=99|d=54|s=176}}
+{{PTS|0297|Hariyama|Fighting|a=209|d=114|s=302}}
+{{PTS|0298|Azurill|Normal|Fairy|a=36|d=71|s=137}}
+{{PTS|0299|Nosepass|Rock|a=82|d=215|s=102}}
+{{PTS|0300|Skitty|Normal|a=84|d=79|s=137}}
+{{PTS|0301|Delcatty|Normal|a=132|d=127|s=172}}
+{{PTS|0302|Sableye|Dark|Ghost|a=141|d=136|s=137}}
+{{PTS|0302|Sableye#Mega|ci=Sableye mega|cl=Mega Sableye|Dark|Ghost|a=151|d=216|s=137}}
+{{PTS|0303|Mawile|Steel|Fairy|a=155|d=141|s=137}}
+{{PTS|0303|Mawile#Mega|ci=Mawile mega|cl=Mega Mawile|Steel|Fairy|a=188|d=217|s=137}}
+{{PTS|0304|Aron|Steel|Rock|a=121|d=141|s=137}}
+{{PTS|0305|Lairon|Steel|Rock|a=158|d=198|s=155}}
+{{PTS|0306|Aggron|Steel|Rock|a=198|d=257|s=172}}
+{{PTS|0306|Aggron#Mega|ci=Aggron mega|cl=Mega Aggron|Steel|a=247|d=331|s=172}}
+{{PTS|0307|Meditite|Fighting|Psychic|a=78|d=107|s=102}}
+{{PTS|0308|Medicham|Fighting|Psychic|a=121|d=152|s=155}}
+{{PTS|0308|Medicham#Mega|ci=Medicham mega|cl=Mega Medicham|Fighting|Psychic|a=205|d=179|s=155}}
+{{PTS|0309|Electrike|Electric|a=123|d=78|s=120}}
+{{PTS|0310|Manectric|Electric|a=215|d=127|s=172}}
+{{PTS|0310|Manectric#Mega|ci=Manectric mega|cl=Mega Manectric|Electric|a=286|d=179|s=172}}
+{{PTS|0311|Plusle|Electric|a=167|d=129|s=155}}
+{{PTS|0312|Minun|Electric|a=147|d=150|s=155}}
+{{PTS|0313|Volbeat|Bug|a=143|d=166|s=163}}
+{{PTS|0314|Illumise|Bug|a=143|d=166|s=163}}
+{{PTS|0315|Roselia|Grass|Poison|a=186|d=131|s=137}}
+{{PTS|0316|Gulpin|Poison|a=80|d=99|s=172}}
+{{PTS|0317|Swalot|Poison|a=140|d=159|s=225}}
+{{PTS|0318|Carvanha|Water|Dark|a=171|d=39|s=128}}
+{{PTS|0319|Sharpedo|Water|Dark|a=243|d=83|s=172}}
+{{PTS|0320|Wailmer|Water|a=136|d=68|s=277}}
+{{PTS|0321|Wailord|Water|a=175|d=87|s=347}}
+{{PTS|0322|Numel|Fire|Ground|a=119|d=79|s=155}}
+{{PTS|0323|Camerupt|Fire|Ground|a=194|d=136|s=172}}
+{{PTS|0324|Torkoal|Fire|a=151|d=203|s=172}}
+{{PTS|0325|Spoink|Psychic|a=125|d=122|s=155}}
+{{PTS|0326|Grumpig|Psychic|a=171|d=188|s=190}}
+{{PTS|0327|Spinda|Normal|a=116|d=116|s=155}}
+{{PTS|0328|Trapinch|Ground|a=162|d=78|s=128}}
+{{PTS|0329|Vibrava|Ground|Dragon|a=134|d=99|s=137}}
+{{PTS|0330|Flygon|Ground|Dragon|a=205|d=168|s=190}}
+{{PTS|0331|Cacnea|Grass|a=156|d=74|s=137}}
+{{PTS|0332|Cacturne|Grass|Dark|a=221|d=115|s=172}}
+{{PTS|0333|Swablu|Normal|Flying|a=76|d=132|s=128}}
+{{PTS|0334|Altaria|Dragon|Flying|a=141|d=201|s=181}}
+{{PTS|0334|Altaria#Mega|ci=Altaria mega|cl=Mega Altaria|Dragon|Fairy|a=222|d=218|s=181}}
+{{PTS|0335|Zangoose|Normal|a=222|d=124|s=177}}
+{{PTS|0336|Seviper|Poison|a=196|d=118|s=177}}
+{{PTS|0337|Lunatone|Rock|Psychic|a=178|d=153|s=207}}
+{{PTS|0338|Solrock|Rock|Psychic|a=178|d=153|s=207}}
+{{PTS|0339|Barboach|Water|Ground|a=93|d=82|s=137}}
+{{PTS|0340|Whiscash|Water|Ground|a=151|d=141|s=242}}
+{{PTS|0341|Corphish|Water|a=141|d=99|s=125}}
+{{PTS|0342|Crawdaunt|Water|Dark|a=224|d=142|s=160}}
+{{PTS|0343|Baltoy|Ground|Psychic|a=77|d=124|s=120}}
+{{PTS|0344|Claydol|Ground|Psychic|a=140|d=229|s=155}}
+{{PTS|0345|Lileep|Rock|Grass|a=105|d=150|s=165}}
+{{PTS|0346|Cradily|Rock|Grass|a=152|d=194|s=200}}
+{{PTS|0347|Anorith|Rock|Bug|a=176|d=100|s=128}}
+{{PTS|0348|Armaldo|Rock|Bug|a=222|d=174|s=181}}
+{{PTS|0349|Feebas|Water|a=29|d=85|s=85}}
+{{PTS|0350|Milotic|Water|a=192|d=219|s=216}}
+{{PTS|0351|Castform|Normal|a=139|d=139|s=172}}
+{{PTS|0351|Castform|Fire|ci=Castform sunny|a=139|d=139|s=172}}
+{{PTS|0351|Castform|Water|ci=Castform rainy|a=139|d=139|s=172}}
+{{PTS|0351|Castform|Ice|ci=Castform snowy|a=139|d=139|s=172}}
+{{PTS|0352|Kecleon|Normal|a=161|d=189|s=155}}
+{{PTS|0353|Shuppet|Ghost|a=138|d=65|s=127}}
+{{PTS|0354|Banette|Ghost|a=218|d=126|s=162}}
+{{PTS|0354|Banette#Mega|ci=Banette mega|cl=Mega Banette|Ghost|a=312|d=160|s=162}}
+{{PTS|0355|Duskull|Ghost|a=70|d=162|s=85}}
+{{PTS|0356|Dusclops|Ghost|a=124|d=234|s=120}}
+{{PTS|0357|Tropius|Grass|Flying|a=136|d=163|s=223}}
+{{PTS|0358|Chimecho|Psychic|a=175|d=170|s=181}}
+{{PTS|0359|Absol|Dark|a=246|d=120|s=163}}
+{{PTS|0359|Absol#Mega|ci=Absol mega|cl=Mega Absol|Dark|a=314|d=130|s=163}}
+{{PTS|0360|Wynaut|Psychic|a=41|d=86|s=216}}
+{{PTS|0361|Snorunt|Ice|a=95|d=95|s=137}}
+{{PTS|0362|Glalie|Ice|a=162|d=162|s=190}}
+{{PTS|0362|Glalie#Mega|ci=Glalie mega|cl=Mega Glalie|Ice|a=252|d=168|s=190}}
+{{PTS|0363|Spheal|Ice|Water|a=95|d=90|s=172}}
+{{PTS|0364|Sealeo|Ice|Water|a=137|d=132|s=207}}
+{{PTS|0365|Walrein|Ice|Water|a=182|d=176|s=242}}
+{{PTS|0366|Clamperl|Water|a=133|d=135|s=111}}
+{{PTS|0367|Huntail|Water|a=197|d=179|s=146}}
+{{PTS|0368|Gorebyss|Water|a=211|d=179|s=146}}
+{{PTS|0369|Relicanth|Water|Rock|a=162|d=203|s=225}}
+{{PTS|0370|Luvdisc|Water|a=81|d=128|s=125}}
+{{PTS|0371|Bagon|Dragon|a=134|d=93|s=128}}
+{{PTS|0372|Shelgon|Dragon|a=172|d=155|s=163}}
+{{PTS|0373|Salamence|Dragon|Flying|a=277|d=168|s=216}}
+{{PTS|0373|Salamence#Mega|ci=Salamence mega|cl=Mega Salamence|Dragon|Flying|a=310|d=251|s=216}}
+{{PTS|0374|Beldum|Steel|Psychic|a=96|d=132|s=120}}
+{{PTS|0375|Metang|Steel|Psychic|a=138|d=176|s=155}}
+{{PTS|0376|Metagross|Steel|Psychic|a=257|d=228|s=190}}
+{{PTS|0377|Regirock|Rock|a=179|d=309|s=190}}
+{{PTS|0378|Regice|Ice|a=179|d=309|s=190}}
+{{PTS|0379|Registeel|Steel|a=143|d=285|s=190}}
+{{PTS|0380|Latias|Dragon|Psychic|a=228|d=246|s=190}}
+{{PTS|0380|Latias#Mega|ci=Latias mega|cl=Mega Latias|Dragon|Psychic|a=289|d=297|s=190}}
+{{PTS|0381|Latios|Dragon|Psychic|a=268|d=212|s=190}}
+{{PTS|0381|Latios#Mega|ci=Latios mega|cl=Mega Latios|Dragon|Psychic|a=335|d=241|s=190}}
+{{PTS|0382|Kyogre|Water|a=270|d=228|s=205}}
+{{PTS|0382|Kyogre#Primal|ci=Kyogre primal|cl=Primal Kyogre|Water|a=353|d=268|s=218}}
+{{PTS|0383|Groudon|Ground|a=270|d=228|s=205}}
+{{PTS|0383|Groudon#Primal|ci=Groudon primal|cl=Primal Groudon|Ground|Fire|a=353|d=268|s=218}}
+{{PTS|0384|Rayquaza|Dragon|Flying|a=284|d=170|s=213}}
+{{PTS|0384|Rayquaza#Mega|ci=Rayquaza mega|cl=Mega Rayquaza|Dragon|Flying|a=377|d=210|s=227}}
+{{PTS|0385|Jirachi|Steel|Psychic|a=210|d=210|s=225}}
+{{PTS|0386|Deoxys|Psychic|a=345|d=115|s=137}}
+{{PTS|0386|Deoxys|ci=Deoxys attack|cl=Deoxys Attack|Psychic|a=414|d=46|s=137}}
+{{PTS|0386|Deoxys|ci=Deoxys defense|cl=Deoxys Defense|Psychic|a=144|d=330|s=137}}
+{{PTS|0386|Deoxys|ci=Deoxys speed|cl=Deoxys Speed|Psychic|a=230|d=218|s=137}}
+{{PTS|0387|Turtwig|Grass|a=119|d=110|s=146}}
+{{PTS|0388|Grotle|Grass|a=157|d=143|s=181}}
+{{PTS|0389|Torterra|Grass|Ground|a=202|d=188|s=216}}
+{{PTS|0390|Chimchar|Fire|a=113|d=86|s=127}}
+{{PTS|0391|Monferno|Fire|Fighting|a=158|d=105|s=162}}
+{{PTS|0392|Infernape|Fire|Fighting|a=222|d=151|s=183}}
+{{PTS|0393|Piplup|Water|a=112|d=102|s=142}}
+{{PTS|0394|Prinplup|Water|a=150|d=139|s=162}}
+{{PTS|0395|Empoleon|Water|Steel|a=210|d=186|s=197}}
+{{PTS|0396|Starly|Normal|Flying|a=101|d=58|s=120}}
+{{PTS|0397|Staravia|Normal|Flying|a=142|d=94|s=146}}
+{{PTS|0398|Staraptor|Normal|Flying|a=234|d=140|s=198}}
+{{PTS|0399|Bidoof|Normal|a=80|d=73|s=153}}
+{{PTS|0400|Bibarel|Normal|Water|a=162|d=119|s=188}}
+{{PTS|0401|Kricketot|Bug|a=45|d=74|s=114}}
+{{PTS|0402|Kricketune|Bug|a=160|d=100|s=184}}
+{{PTS|0403|Shinx|Electric|a=117|d=64|s=128}}
+{{PTS|0404|Luxio|Electric|a=159|d=95|s=155}}
+{{PTS|0405|Luxray|Electric|a=232|d=156|s=190}}
+{{PTS|0406|Budew|Grass|Poison|a=91|d=109|s=120}}
+{{PTS|0407|Roserade|Grass|Poison|a=243|d=185|s=155}}
+{{PTS|0408|Cranidos|Rock|a=218|d=71|s=167}}
+{{PTS|0409|Rampardos|Rock|a=295|d=109|s=219}}
+{{PTS|0410|Shieldon|Rock|Steel|a=76|d=195|s=102}}
+{{PTS|0411|Bastiodon|Rock|Steel|a=94|d=286|s=155}}
+{{PTS|0412|Burmy|Bug|a=53|d=83|s=120}}
+{{PTS|0413|Wormadam|Bug|Grass|a=141|d=180|s=155}}
+{{PTS|0414|Mothim|Bug|Flying|a=185|d=98|s=172}}
+{{PTS|0415|Combee|Bug|Flying|a=59|d=83|s=102}}
+{{PTS|0416|Vespiquen|Bug|Flying|a=149|d=190|s=172}}
+{{PTS|0417|Pachirisu|Electric|a=94|d=172|s=155}}
+{{PTS|0418|Buizel|Water|a=132|d=67|s=146}}
+{{PTS|0419|Floatzel|Water|a=221|d=114|s=198}}
+{{PTS|0420|Cherubi|Grass|a=108|d=92|s=128}}
+{{PTS|0421|Cherrim|Grass|a=170|d=153|s=172}}
+{{PTS|0422|Shellos|Water|a=103|d=105|s=183}}
+{{PTS|0423|Gastrodon|Water|Ground|a=169|d=143|s=244}}
+{{PTS|0424|Ambipom|Normal|a=205|d=143|s=181}}
+{{PTS|0425|Drifloon|Ghost|Flying|a=117|d=80|s=207}}
+{{PTS|0426|Drifblim|Ghost|Flying|a=180|d=102|s=312}}
+{{PTS|0427|Buneary|Normal|a=130|d=105|s=146}}
+{{PTS|0428|Lopunny|Normal|a=156|d=194|s=163}}
+{{PTS|0428|Lopunny#Mega|ci=Lopunny mega|cl=Mega Lopunny|Normal|Fighting|a=282|d=214|s=163}}
+{{PTS|0429|Mismagius|Ghost|a=211|d=187|s=155}}
+{{PTS|0430|Honchkrow|Dark|Flying|a=243|d=103|s=225}}
+{{PTS|0431|Glameow|Normal|a=109|d=82|s=135}}
+{{PTS|0432|Purugly|Normal|a=172|d=133|s=174}}
+{{PTS|0433|Chingling|Psychic|a=114|d=94|s=128}}
+{{PTS|0434|Stunky|Poison|Dark|a=121|d=90|s=160}}
+{{PTS|0435|Skuntank|Poison|Dark|a=184|d=132|s=230}}
+{{PTS|0436|Bronzor|Steel|Psychic|a=43|d=154|s=149}}
+{{PTS|0437|Bronzong|Steel|Psychic|a=161|d=213|s=167}}
+{{PTS|0438|Bonsly|Rock|a=124|d=133|s=137}}
+{{PTS|0439|Mime Jr.|Psychic|Fairy|a=125|d=142|s=85}}
+{{PTS|0440|Happiny|Normal|a=25|d=77|s=225}}
+{{PTS|0441|Chatot|Normal|Flying|a=183|d=91|s=183}}
+{{PTS|0442|Spiritomb|Ghost|Dark|a=169|d=199|s=137}}
+{{PTS|0443|Gible|Dragon|Ground|a=124|d=84|s=151}}
+{{PTS|0444|Gabite|Dragon|Ground|a=172|d=125|s=169}}
+{{PTS|0445|Garchomp|Dragon|Ground|a=261|d=193|s=239}}
+{{PTS|0445|Garchomp#Mega|ci=Garchomp mega|cl=Mega Garchomp|Dragon|Ground|a=339|d=222|s=239}}
+{{PTS|0446|Munchlax|Normal|a=137|d=117|s=286}}
+{{PTS|0447|Riolu|Fighting|a=127|d=78|s=120}}
+{{PTS|0448|Lucario|Fighting|Steel|a=236|d=144|s=172}}
+{{PTS|0448|Lucario#Mega|ci=Lucario mega|cl=Mega Lucario|Fighting|Steel|a=310|d=175|s=172}}
+{{PTS|0449|Hippopotas|Ground|a=124|d=118|s=169}}
+{{PTS|0450|Hippowdon|Ground|a=201|d=191|s=239}}
+{{PTS|0451|Skorupi|Poison|Bug|a=93|d=151|s=120}}
+{{PTS|0452|Drapion|Poison|Dark|a=180|d=202|s=172}}
+{{PTS|0453|Croagunk|Poison|Fighting|a=116|d=76|s=134}}
+{{PTS|0454|Toxicroak|Poison|Fighting|a=211|d=133|s=195}}
+{{PTS|0455|Carnivine|Grass|a=187|d=136|s=179}}
+{{PTS|0456|Finneon|Water|a=96|d=116|s=135}}
+{{PTS|0457|Lumineon|Water|a=142|d=170|s=170}}
+{{PTS|0458|Mantyke|Water|Flying|a=105|d=179|s=128}}
+{{PTS|0459|Snover|Grass|Ice|a=115|d=105|s=155}}
+{{PTS|0460|Abomasnow|Grass|Ice|a=178|d=158|s=207}}
+{{PTS|0460|Abomasnow#Mega|ci=Abomasnow mega|cl=Mega Abomasnow|Grass|Ice|a=240|d=191|s=207}}
+{{PTS|0461|Weavile|Dark|Ice|a=243|d=171|s=172}}
+{{PTS|0462|Magnezone|Electric|Steel|a=238|d=205|s=172}}
+{{PTS|0463|Lickilicky|Normal|a=161|d=181|s=242}}
+{{PTS|0464|Rhyperior|Ground|Rock|a=241|d=190|s=251}}
+{{PTS|0465|Tangrowth|Grass|a=207|d=184|s=225}}
+{{PTS|0466|Electivire|Electric|a=249|d=163|s=181}}
+{{PTS|0467|Magmortar|Fire|a=247|d=172|s=181}}
+{{PTS|0468|Togekiss|Fairy|Flying|a=225|d=217|s=198}}
+{{PTS|0469|Yanmega|Bug|Flying|a=231|d=156|s=200}}
+{{PTS|0470|Leafeon|Grass|a=216|d=219|s=163}}
+{{PTS|0471|Glaceon|Ice|a=238|d=205|s=163}}
+{{PTS|0472|Gliscor|Ground|Flying|a=185|d=222|s=181}}
+{{PTS|0473|Mamoswine|Ice|Ground|a=247|d=146|s=242}}
+{{PTS|0474|Porygon-Z|Normal|a=264|d=150|s=198}}
+{{PTS|0475|Gallade|Psychic|Fighting|a=237|d=195|s=169}}
+{{PTS|0476|Probopass|Rock|Steel|a=135|d=275|s=155}}
+{{PTS|0477|Dusknoir|Ghost|a=180|d=254|s=128}}
+{{PTS|0478|Froslass|Ice|Ghost|a=171|d=150|s=172}}
+{{PTS|0479|Rotom|Electric|Ghost|a=185|d=159|s=137}}
+{{PTS|0479|Rotom|ci=Rotom heat|cl=Heat Rotom|Electric|Fire|a=204|d=219|s=137}}
+{{PTS|0479|Rotom|ci=Rotom wash|cl=Wash Rotom|Electric|Water|a=204|d=219|s=137}}
+{{PTS|0479|Rotom|ci=Rotom frost|cl=Frost Rotom|Electric|Ice|a=204|d=219|s=137}}
+{{PTS|0479|Rotom|ci=Rotom fan|cl=Fan Rotom|Electric|Flying|a=204|d=219|s=137}}
+{{PTS|0479|Rotom|ci=Rotom mow|cl=Mow Rotom|Electric|Grass|a=204|d=219|s=137}}
+{{PTS|0480|Uxie|Psychic|a=156|d=270|s=181}}
+{{PTS|0481|Mesprit|Psychic|a=212|d=212|s=190}}
+{{PTS|0482|Azelf|Psychic|a=270|d=151|s=181}}
+{{PTS|0483|Dialga|Steel|Dragon|a=275|d=211|s=205}}
+{{PTS|0483|Dialga|ci=Dialga origin|cl=Origin Forme Dialga|Steel|Dragon|a=270|d=225|s=205}}
+{{PTS|0484|Palkia|Water|Dragon|a=280|d=215|s=189}}
+{{PTS|0484|Palkia|ci=Palkia origin|cl=Origin Forme Palkia|Water|Dragon|a=286|d=223|s=189}}
+{{PTS|0485|Heatran|Fire|Steel|a=251|d=213|s=209}}
+{{PTS|0486|Regigigas|Normal|a=287|d=210|s=221}}
+{{PTS|0487|Giratina|cl=Altered Forme Giratina|Ghost|Dragon|a=187|d=225|s=284}}
+{{PTS|0487|Giratina|ci=Giratina origin|cl=Origin Forme Giratina|Ghost|Dragon|a=225|d=187|s=284}}
+{{PTS|0488|Cresselia|Psychic|a=152|d=258|s=260}}
+<!--{{PTS|0489|Phione|Water|a=162|d=162|s=190}}
+{{PTS|0490|Manaphy|Water|a=210|d=210|s=225}}-->
+{{PTS|0491|Darkrai|Dark|a=285|d=198|s=172}}
+{{PTS|0492|Shaymin|Grass|a=210|d=210|s=225}}
+{{PTS|0492|Shaymin|ci=Shaymin sky|cl=Sky Shaymin|Grass|Flying|a=261|d=166|s=225}}
+<!--{{PTS|0493|Arceus|normal|a=238|d=238|s=237}}-->
+{{PTS|0494|Victini|Psychic|Fire|a=210|d=210|s=225}}
+{{PTS|0495|Snivy|Grass|a=88|d=107|s=128}}
+{{PTS|0496|Servine|Grass|a=122|d=152|s=155}}
+{{PTS|0497|Serperior|Grass|a=161|d=204|s=181}}
+{{PTS|0498|Tepig|Fire|a=115|d=85|s=163}}
+{{PTS|0499|Pignite|Fire|Fighting|a=173|d=106|s=207}}
+{{PTS|0500|Emboar|Fire|Fighting|a=235|d=127|s=242}}
+{{PTS|0501|Oshawott|Water|a=117|d=85|s=146}}
+{{PTS|0502|Dewott|Water|a=159|d=116|s=181}}
+{{PTS|0503|Samurott|Water|a=212|d=157|s=216}}
+{{PTS|0503|Samurott|ci=Samurott hisuian|cl=Hisuian Samurott|Water|Dark|a=218|d=152|s=207}}
+{{PTS|0504|Patrat|Normal|a=98|d=73|s=128}}
+{{PTS|0505|Watchog|Normal|a=165|d=139|s=155}}
+{{PTS|0506|Lillipup|Normal|a=107|d=86|s=128}}
+{{PTS|0507|Herdier|Normal|a=145|d=126|s=163}}
+{{PTS|0508|Stoutland|Normal|a=206|d=182|s=198}}
+{{PTS|0509|Purrloin|Dark|a=98|d=73|s=121}}
+{{PTS|0510|Liepard|Dark|a=187|d=106|s=162}}
+{{PTS|0511|Pansage|Grass|a=104|d=94|s=137}}
+{{PTS|0512|Simisage|Grass|a=206|d=133|s=181}}
+{{PTS|0513|Pansear|Fire|a=104|d=94|s=137}}
+{{PTS|0514|Simisear|Fire|a=206|d=133|s=181}}
+{{PTS|0515|Panpour|Water|a=104|d=94|s=137}}
+{{PTS|0516|Simipour|Water|a=206|d=133|s=181}}
+{{PTS|0517|Munna|Psychic|a=111|d=92|s=183}}
+{{PTS|0518|Musharna|Psychic|a=183|d=166|s=253}}
+{{PTS|0519|Pidove|Normal|Flying|a=98|d=80|s=137}}
+{{PTS|0520|Tranquill|Normal|Flying|a=144|d=107|s=158}}
+{{PTS|0521|Unfezant|Normal|Flying|a=226|d=146|s=190}}
+{{PTS|0522|Blitzle|Electric|a=118|d=64|s=128}}
+{{PTS|0523|Zebstrika|Electric|a=211|d=136|s=181}}
+{{PTS|0524|Roggenrola|Rock|a=121|d=110|s=146}}
+{{PTS|0525|Boldore|Rock|a=174|d=143|s=172}}
+{{PTS|0526|Gigalith|Rock|a=226|d=201|s=198}}
+{{PTS|0527|Woobat|Psychic|Flying|a=107|d=85|s=163}}
+{{PTS|0528|Swoobat|Psychic|Flying|a=161|d=119|s=167}}
+{{PTS|0529|Drilbur|Ground|a=154|d=85|s=155}}
+{{PTS|0530|Excadrill|Ground|Steel|a=255|d=129|s=242}}
+{{PTS|0531|Audino|Normal|a=114|d=163|s=230}}
+{{PTS|0532|Timburr|Fighting|a=134|d=87|s=181}}
+{{PTS|0533|Gurdurr|Fighting|a=180|d=134|s=198}}
+{{PTS|0534|Conkeldurr|Fighting|a=243|d=158|s=233}}
+{{PTS|0535|Tympole|Water|a=98|d=78|s=137}}
+{{PTS|0536|Palpitoad|Water|Ground|a=128|d=109|s=181}}
+{{PTS|0537|Seismitoad|Water|Ground|a=188|d=150|s=233}}
+{{PTS|0538|Throh|Fighting|a=172|d=160|s=260|}}
+{{PTS|0539|Sawk|Fighting|a=231|d=153|s=181}}
+{{PTS|0540|Sewaddle|Bug|Grass|a=96|d=124|s=128}}
+{{PTS|0541|Swadloon|Bug|Grass|a=115|d=162|s=146}}
+{{PTS|0542|Leavanny|Bug|Grass|a=205|d=165|s=181}}
+{{PTS|0543|Venipede|Bug|Poison|a=83|d=99|s=102}}
+{{PTS|0544|Whirlipede|Bug|Poison|a=100|d=173|s=120}}
+{{PTS|0545|Scolipede|Bug|Poison|a=203|d=175|s=155}}
+{{PTS|0546|Cottonee|Grass|Fairy|a=71|d=111|s=120}}
+{{PTS|0547|Whimsicott|Grass|Fairy|a=164|d=176|s=155}}
+{{PTS|0548|Petilil|Grass|a=119|d=91|s=128}}
+{{PTS|0549|Lilligant|Grass|a=214|d=155|s=172}}
+{{PTS|0550|Basculin|Water|a=189|d=129|s=172}}
+{{PTS|0551|Sandile|Ground|Dark|a=132|d=69|s=137}}
+{{PTS|0552|Krokorok|Ground|Dark|a=155|d=90|s=155}}
+{{PTS|0553|Krookodile|Ground|Dark|a=229|d=158|s=216}}
+{{PTS|0554|Darumaka|Fire|a=153|d=86|s=172}}
+{{PTS|0554|Darumaka|ci=Darumaka galarian|cl=Galarian Darumaka|Ice|a=153|d=86|s=172}}
+{{PTS|0555|Darmanitan|Fire|a=263|d=114|s=233}}
+{{PTS|0555|Darmanitan|ci=Darmanitan galarian|cl=Galarian Darmanitan|Ice|a=263|d=114|s=233}}
+{{PTS|0556|Maractus|Grass|a=201|d=130|s=181}}
+{{PTS|0557|Dwebble|Bug|Rock|a=118|d=128|s=137}}
+{{PTS|0558|Crustle|Bug|Rock|a=188|d=200|s=172}}
+{{PTS|0559|Scraggy|Dark|Fighting|a=132|d=132|s=137}}
+{{PTS|0560|Scrafty|Dark|Fighting|a=163|d=222|s=163}}
+{{PTS|0561|Sigilyph|Psychic|Flying|a=204|d=167|s=176}}
+{{PTS|0562|Yamask|Ghost|a=95|d=141|s=116}}
+{{PTS|0562|Yamask|ci=Yamask galarian|cl=Galarian Yamask|Ground|Ghost|a=95|d=141|s=116}}
+{{PTS|0563|Cofagrigus|Ghost|a=163|d=237|s=151}}
+{{PTS|0564|Tirtouga|Water|Rock|a=134|d=146|s=144}}
+{{PTS|0565|Carracosta|Water|Rock|a=192|d=197|s=179}}
+{{PTS|0566|Archen|Rock|Flying|a=213|d=89|s=146}}
+{{PTS|0567|Archeops|Rock|Flying|a=292|d=139|s=181}}
+{{PTS|0568|Trubbish|Poison|a=96|d=122|s=137}}
+{{PTS|0569|Garbodor|Poison|a=181|d=164|s=190}}
+{{PTS|0570|Zorua|Dark|a=153|d=78|s=120}}
+{{PTS|0571|Zoroark|Dark|a=250|d=127|s=155}}
+{{PTS|0572|Minccino|Normal|a=98|d=80|s=146}}
+{{PTS|0573|Cinccino|Normal|a=198|d=130|s=181}}
+{{PTS|0574|Gothita|Psychic|a=98|d=112|s=128}}
+{{PTS|0575|Gothorita|Psychic|a=137|d=153|s=155}}
+{{PTS|0576|Gothitelle|Psychic|a=176|d=205|s=172}}
+{{PTS|0577|Solosis|Psychic|a=170|d=83|s=128}}
+{{PTS|0578|Duosion|Psychic|a=208|d=103|s=163}}
+{{PTS|0579|Reuniclus|Psychic|a=214|d=148|s=242}}
+{{PTS|0580|Ducklett|Water|Flying|a=84|d=96|s=158}}
+{{PTS|0581|Swanna|Water|Flying|a=182|d=132|s=181}}
+{{PTS|0582|Vanillite|Ice|a=118|d=106|s=113}}
+{{PTS|0583|Vanillish|Ice|a=151|d=138|s=139}}
+{{PTS|0584|Vanilluxe|Ice|a=218|d=184|s=174}}
+{{PTS|0585|Deerling|Normal|Grass|a=115|d=100|s=155}}
+{{PTS|0586|Sawsbuck|Normal|Grass|a=198|d=146|s=190}}
+{{PTS|0587|Emolga|Electric|Flying|a=158|d=127|s=146}}
+{{PTS|0588|Karrablast|Bug|a=137|d=87|s=137}}
+{{PTS|0589|Escavalier|Bug|Steel|a=223|d=187|s=172}}
+{{PTS|0590|Foongus|Grass|Poison|a=97|d=91|s=170}}
+{{PTS|0591|Amoonguss|Grass|Poison|a=155|d=139|s=249}}
+{{PTS|0592|Frillish|Water|Ghost|a=115|d=134|s=146}}
+{{PTS|0593|Jellicent|Water|Ghost|a=159|d=178|s=225}}
+{{PTS|0594|Alomomola|Water|a=138|d=131|s=338}}
+{{PTS|0595|Joltik|Bug|Electric|a=110|d=98|s=137}}
+{{PTS|0596|Galvantula|Bug|Electric|a=201|d=128|s=172}}
+{{PTS|0597|Ferroseed|Grass|Steel|a=82|d=155|s=127}}
+{{PTS|0598|Ferrothorn|Grass|Steel|a=158|d=223|s=179}}
+{{PTS|0599|Klink|Steel|a=98|d=121|s=120}}
+{{PTS|0600|Klang|Steel|a=150|d=174|s=155}}
+{{PTS|0601|Klinklang|Steel|a=199|d=214|s=155}}
+{{PTS|0602|Tynamo|Electric|a=105|d=78|s=111}}
+{{PTS|0603|Eelektrik|Electric|a=156|d=130|s=163}}
+{{PTS|0604|Eelektross|Electric|a=217|d=152|s=198}}
+{{PTS|0605|Elgyem|Psychic|a=148|d=100|s=146}}
+{{PTS|0606|Beheeyem|Psychic|a=221|d=163|s=181}}
+{{PTS|0607|Litwick|Ghost|Fire|a=108|d=98|s=137}}
+{{PTS|0608|Lampent|Ghost|Fire|a=169|d=115|s=155}}
+{{PTS|0609|Chandelure|Ghost|Fire|a=271|d=182|s=155}}
+{{PTS|0610|Axew|Dragon|a=154|d=101|s=130}}
+{{PTS|0611|Fraxure|Dragon|a=212|d=123|s=165}}
+{{PTS|0612|Haxorus|Dragon|a=284|d=172|s=183}}
+{{PTS|0613|Cubchoo|Ice|a=128|d=74|s=146}}
+{{PTS|0614|Beartic|Ice|a=233|d=152|s=216}}
+{{PTS|0615|Cryogonal|Ice|a=190|d=218|s=190}}
+{{PTS|0616|Shelmet|Bug|a=72|d=140|s=137}}
+{{PTS|0617|Accelgor|Bug|a=220|d=120|s=190}}
+{{PTS|0618|Stunfisk|Ground|Electric|a=144|d=171|s=240}}
+{{PTS|0618|Stunfisk|ci=Stunfisk galarian|cl=Galarian Stunfisk|Ground|Steel|a=144|d=171|s=240}}
+{{PTS|0619|Mienfoo|Fighting|a=160|d=98|s=128}}
+{{PTS|0620|Mienshao|Fighting|a=258|d=127|s=163}}
+{{PTS|0621|Druddigon|Dragon|a=213|d=170|s=184}}
+{{PTS|0622|Golett|Ground|Ghost|a=127|d=92|s=153}}
+{{PTS|0623|Golurk|Ground|Ghost|a=222|d=154|s=205}}
+{{PTS|0624|Pawniard|Dark|Steel|a=154|d=114|s=128}}
+{{PTS|0625|Bisharp|Dark|Steel|a=232|d=176|s=163}}
+{{PTS|0626|Bouffalant|Normal|a=195|d=182|s=216}}
+{{PTS|0627|Rufflet|Normal|Flying|a=150|d=97|s=172}}
+{{PTS|0628|Braviary|Normal|Flying|a=232|d=152|s=225}}
+{{PTS|0628|Braviary|ci=Braviary hisuian|cl=Hisuian Braviary|Psychic|Flying|a=213|d=137|s=242}}
+{{PTS|0629|Vullaby|Dark|Flying|a=105|d=139|s=172}}
+{{PTS|0630|Mandibuzz|Dark|Flying|a=129|d=205|s=242}}
+{{PTS|0631|Heatmor|Fire|a=204|d=129|s=198}}
+{{PTS|0632|Durant|Bug|Steel|a=217|d=188|s=151}}
+{{PTS|0633|Deino|Dark|Dragon|a=116|d=93|s=141}}
+{{PTS|0634|Zweilous|Dark|Dragon|a=159|d=135|s=176}}
+{{PTS|0635|Hydreigon|Dark|Dragon|a=256|d=188|s=211}}
+{{PTS|0636|Larvesta|Bug|Fire|a=156|d=107|s=146}}
+{{PTS|0637|Volcarona|Bug|Fire|a=264|d=189|s=198}}
+{{PTS|0638|Cobalion|Steel|Fighting|a=192|d=229|s=209}}
+{{PTS|0639|Terrakion|Rock|Fighting|a=260|d=192|s=209}}
+{{PTS|0640|Virizion|Grass|Fighting|a=192|d=229|s=209}}
+{{PTS|0641|Tornadus|cl=Incarnate Forme Tornadus|Flying|a=266|d=164|s=188}}
+{{PTS|0641|Tornadus|ci=Tornadus therian|cl=Therian Forme Tornadus|Flying|a=238|d=189|s=188}}
+{{PTS|0642|Thundurus|cl=Incarnate Forme Thundurus|Electric|Flying|a=266|d=164|s=188}}
+{{PTS|0642|Thundurus|ci=Thundurus therian|cl=Therian Forme Thundurus|Electric|Flying|a=295|d=161|s=188}}
+{{PTS|0643|Reshiram|Dragon|Fire|a=275|d=211|s=205}}
+{{PTS|0644|Zekrom|Dragon|Electric|a=275|d=211|s=205}}
+{{PTS|0645|Landorus|cl=Incarnate Forme Landorus|Ground|Flying|a=261|d=182|s=205}}
+{{PTS|0645|Landorus|ci=Landorus therian|cl=Therian Forme Landorus|Ground|Flying|a=289|d=179|s=205}}
+{{PTS|0646|Kyurem|Dragon|Ice|a=246|d=170|s=245}}
+{{PTS|0647|Keldeo|Water|Fighting|a=260|d=192|s=209}}
+{{PTS|0648|Meloetta|Normal|Psychic|a=250|d=225|s=225}}
+{{PTS|0649|Genesect|Bug|Steel|a=252|d=199|s=174}}
+{{PTS|0650|Chespin|Grass|a=110|d=106|s=148}}
+{{PTS|0651|Quilladin|Grass|a=146|d=156|s=156}}
+{{PTS|0652|Chesnaught|Grass|Fighting|a=201|d=204|s=204}}
+{{PTS|0653|Fennekin|Fire|a=116|d=102|s=120}}
+{{PTS|0654|Braixen|Fire|a=171|d=130|s=153}}
+{{PTS|0655|Delphox|Fire|Psychic|a=230|d=189|s=181}}
+{{PTS|0656|Froakie|Water|a=122|d=84|s=121}}
+{{PTS|0657|Frogadier|Water|a=168|d=114|s=144}}
+{{PTS|0658|Greninja|Water|Dark|a=223|d=152|s=176}}
+{{PTS|0659|Bunnelby|Normal|a=68|d=72|s=116}}
+{{PTS|0660|Diggersby|Normal|Ground|a=112|d=155|s=198}}
+{{PTS|0661|Fletchling|Normal|Flying|a=95|d=80|s=128}}
+{{PTS|0662|Fletchinder|Fire|Flying|a=145|d=110|s=158}}
+{{PTS|0663|Talonflame|Fire|Flying|a=176|d=155|s=186}}
+{{PTS|0664|Scatterbug|Bug|a=63|d=63|s=116}}
+{{PTS|0665|Spewpa|Bug|a=48|d=89|s=128}}
+{{PTS|0666|Vivillon|Bug|Flying|a=176|d=103|s=190}}
+{{PTS|0667|Litleo|Fire|Normal|a=139|d=112|s=158}}
+{{PTS|0668|Pyroar|Fire|Normal|a=221|d=149|s=200}}
+{{PTS|0669|Flabébé|Fairy|a=108|d=120|s=127}}
+{{PTS|0670|Floette|Fairy|a=136|d=151|s=144}}
+{{PTS|0671|Florges|Fairy|a=212|d=244|s=186}}
+{{PTS|0672|Skiddo|Grass|a=123|d=102|s=165}}
+{{PTS|0673|Gogoat|Grass|a=196|d=146|s=265}}
+{{PTS|0674|Pancham|Fighting|a=145|d=107|s=167}}
+{{PTS|0675|Pangoro|Fighting|Dark|a=226|d=146|s=216}}
+{{PTS|0676|Furfrou|Normal|a=164|d=167|s=181}}
+{{PTS|0677|Espurr|Psychic|a=120|d=114|s=158}}
+{{PTS|0678|Meowstic|Psychic|a=166|d=167|s=179}}
+{{PTS|0682|Spritzee|Fairy|a=110|d=113|s=186}}
+{{PTS|0683|Aromatisse|Fairy|a=173|d=150|s=226}}
+{{PTS|0684|Swirlix|Fairy|a=109|d=119|s=158}}
+{{PTS|0685|Slurpuff|Fairy|a=168|d=163|s=193}}
+{{PTS|0686|Inkay|Dark|Psychic|a=98|d=95|s=142}}
+{{PTS|0687|Malamar|Dark|Psychic|a=177|d=165|s=200}}
+{{PTS|0688|Binacle|Rock|Water|a=96|d=120|s=123}}
+{{PTS|0689|Barbaracle|Rock|Water|a=194|d=205|s=176}}
+{{PTS|0690|Skrelp|Poison|Water|a=109|d=109|s=137}}
+{{PTS|0691|Dragalge|Poison|Dragon|a=177|d=207|s=163}}
+{{PTS|0692|Clauncher|Water|a=108|d=117|s=137}}
+{{PTS|0693|Clawitzer|Water|a=221|d=171|s=174}}
+{{PTS|0694|Helioptile|Electric|Normal|a=115|d=78|s=127}}
+{{PTS|0695|Heliolisk|Electric|Normal|a=219|d=168|s=158}}
+{{PTS|0696|Tyrunt|Rock|Dragon|a=158|d=123|s=151}}
+{{PTS|0697|Tyrantrum|Rock|Dragon|a=227|d=191|s=193}}
+{{PTS|0698|Amaura|Rock|Ice|a=124|d=109|s=184}}
+{{PTS|0699|Aurorus|Rock|Ice|a=186|d=163|s=265}}
+{{PTS|0700|Sylveon|Fairy|a=203|d=205|s=216}}
+{{PTS|0701|Hawlucha|Fighting|Flying|a=195|d=153|s=186}}
+{{PTS|0702|Dedenne|Electric|Fairy|a=164|d=134|s=167}}
+{{PTS|0703|Carbink|Rock|Fairy|a=95|d=285|s=137}}
+{{PTS|0704|Goomy|Dragon|a=101|d=112|s=128}}
+{{PTS|0705|Sliggoo|Dragon|a=159|d=176|s=169}}
+{{PTS|0706|Goodra|Dragon|a=220|d=242|s=207}}
+{{PTS|0707|Klefki|Steel|Fairy|a=160|d=179|s=149}}
+{{PTS|0708|Phantump|Ghost|Grass|a=125|d=103|s=125}}
+{{PTS|0709|Trevenant|Ghost|Grass|a=201|d=154|s=198}}
+{{PTS|0710|Pumpkaboo|Ghost|Grass|a=121|d=123|s=135}}
+{{PTS|0710|Pumpkaboo|ci=Pumpkaboo small|cl=Pumpkaboo Small|Ghost|Grass|a=122|d=124|s=127}}
+{{PTS|0710|Pumpkaboo|ci=Pumpkaboo large|cl=Pumpkaboo Large|Ghost|Grass|a=120|d=122|s=144}}
+{{PTS|0710|Pumpkaboo|ci=Pumpkaboo super|cl=Pumpkaboo Super|Ghost|Grass|a=118|d=120|s=153}}
+{{PTS|0711|Gourgeist|Ghost|Grass|a=175|d=213|s=163}}
+{{PTS|0711|Gourgeist|ci=Gourgeist small|cl=Gourgeist Small|Ghost|Grass|a=171|d=219|s=146}}
+{{PTS|0711|Gourgeist|ci=Gourgeist large|cl=Gourgeist Large|Ghost|Grass|a=179|d=206|s=181}}
+{{PTS|0711|Gourgeist|ci=Gourgeist super|cl=Gourgeist Super|Ghost|Grass|a=182|d=200|s=198}}
+{{PTS|0712|Bergmite|Ice|a=117|d=120|s=146}}
+{{PTS|0713|Avalugg|Ice|a=196|d=240|s=216}}
+{{PTS|0713|Avalugg|ci=Avalugg hisuian|cl=Hisuian Avalugg|Ice|Rock|a=214|d=238|s=216}}
+{{PTS|0714|Noibat|Flying|Dragon|a=83|d=73|s=120}}
+{{PTS|0715|Noivern|Flying|Dragon|a=205|d=175|s=198}}
+{{PTS|0716|Xerneas|Fairy|a=250|d=185|s=246}}
+{{PTS|0717|Yveltal|Dark|Flying|a=250|d=185|s=246}}
+{{PTS|0718|Zygarde|ci=Zygarde 10percent|cl=Zygarde 10%|Dragon|Ground|a=205|d=173|s=144}}
+{{PTS|0718|Zygarde|cl=Zygarde 50%|Dragon|Ground|a=203|d=232|s=239}}
+{{PTS|0718|Zygarde|ci=Zygarde complete|cl=Zygarde Complete|Dragon|Ground|a=184|d=207|s=389}}
+{{PTS|0719|Diancie|Rock|Fairy|a=190|d=285|s=137}}
+{{PTS|0719|Diancie#Mega|ci=Diancie mega|cl=Mega Diancie|Rock|Fairy|a=342|d=235|s=137}}
+{{PTS|0720|Hoopa|cl=Hoopa Confined|Psychic|Ghost|a=261|d=187|s=173}}
+{{PTS|0720|Hoopa|ci=Hoopa unbound|cl=Hoopa Unbound|Psychic|Dark|a=311|d=191|s=173}}
+{{PTS|0722|Rowlet|Grass|Flying|a=102|d=99|s=169}}
+{{PTS|0723|Dartrix|Grass|Flying|a=142|d=139|s=186}}
+{{PTS|0724|Decidueye|Grass|Ghost|a=210|d=179|s=186}}
+{{PTS|0724|Decidueye|ci=Decidueye hisuian|cl=Hisuian Decidueye|Grass|Fighting|a=213|d=174|s=204}}
+{{PTS|0725|Litten|Fire|a=128|d=79|s=128}}
+{{PTS|0726|Torracat|Fire|a=174|d=103|s=163}}
+{{PTS|0727|Incineroar|Fire|Dark|a=214|d=175|s=216}}
+{{PTS|0728|Popplio|Water|a=120|d=103|s=137}}
+{{PTS|0729|Brionne|Water|a=168|d=145|s=155}}
+{{PTS|0730|Primarina|Water|Fairy|a=232|d=195|s=190}}
+{{PTS|0731|Pikipek|Normal|Flying|a=136|d=59|s=111}}
+{{PTS|0732|Trumbeak|Normal|Flying|a=159|d=100|s=146}}
+{{PTS|0733|Toucannon|Normal|Flying|a=222|d=146|s=190}}
+{{PTS|0734|Yungoos|Normal|a=122|d=56|s=134}}
+{{PTS|0735|Gumshoos|Normal|a=194|d=113|s=204}}
+{{PTS|0736|Grubbin|Bug|a=115|d=85|s=132}}
+{{PTS|0737|Charjabug|Bug|Electric|a=145|d=161|s=149}}
+{{PTS|0738|Vikavolt|Bug|Electric|a=254|d=158|s=184}}
+{{PTS|0739|Crabrawler|Fighting|a=150|d=104|s=132}}
+{{PTS|0740|Crabominable|Fighting|Ice|a=231|d=138|s=219}}
+{{PTS|0741|Oricorio|Fire|Flying|a=196|d=145|s=181}}
+{{PTS|0742|Cutiefly|Bug|Fairy|a=110|d=81|s=120}}
+{{PTS|0743|Ribombee|Bug|Fairy|a=198|d=146|s=155}}
+{{PTS|0744|Rockruff|Rock|a=117|d=78|s=128}}
+{{PTS|0745|Lycanroc|cl=Lycanric Midday|Rock|a=231|d=140|s=181}}
+{{PTS|0745|Lycanroc|ci=Lycanroc midnight|cl=Lycanroc Midnight|Rock|a=218|d=152|s=198}}
+{{PTS|0745|Lycanroc|ci=Lycanroc dusk|cl=Lycanroc Dusk|Rock|a=234|d=139|s=181}}
+{{PTS|0747|Mareanie|Poison|Water|a=98|d=110|s=137}}
+{{PTS|0748|Toxapex|Poison|Water|a=114|d=273|s=137}}
+{{PTS|0751|Dewpider|Water|Bug|a=72|d=117|s=116}}
+{{PTS|0752|Araquanid|Water|Bug|a=126|d=219|s=169}}
+{{PTS|0753|Fomantis|Grass|a=100|d=64|s=120}}
+{{PTS|0754|Lurantis|Grass|a=192|d=169|s=172}}
+{{PTS|0755|Morelull|Grass|Fairy|a=108|d=119|s=120}}
+{{PTS|0756|Shiinotic|Grass|Fairy|a=154|d=168|s=155}}
+{{PTS|0757|Salandit|Poison|Fire|a=136|d=80|s=134}}
+{{PTS|0758|Salazzle|Poison|Fire|a=228|d=130|s=169}}
+{{PTS|0759|Stufful|Normal|Fighting|a=136|d=95|s=172}}
+{{PTS|0760|Bewear|Normal|Fighting|a=226|d=141|s=260}}
+{{PTS|0761|Bounsweet|Grass|a=55|d=69|s=123}}
+{{PTS|0762|Steenee|Grass|a=78|d=94|s=141}}
+{{PTS|0763|Tsareena|Grass|a=222|d=195|s=176}}
+{{PTS|0764|Comfey|Fairy|a=165|d=215|s=139}}
+{{PTS|0765|Oranguru|Normal|Psychic|a=168|d=192|s=207}}
+{{PTS|0766|Passimian|Fighting|a=222|d=160|s=225}}
+{{PTS|0767|Wimpod|Bug|Water|a=67|d=74|s=93}}
+{{PTS|0768|Golisopod|Bug|Water|a=218|d=226|s=181}}
+{{PTS|0769|Sandygast|Ghost|Ground|a=120|d=118|s=146}}
+{{PTS|0770|Palossand|Ghost|Ground|a=178|d=178|s=198}}
+{{PTS|0775|Komala|Normal|a=216|d=165|s=163}}
+{{PTS|0776|Turtonator|Fire|Dragon|a=165|d=215|s=155}}
+{{PTS|0777|Togedemaru|Electric|Steel|a=190|d=145|s=163}}
+{{PTS|0779|Bruxish|Water|Psychic|a=208|d=145|s=169}}
+{{PTS|0780|Drampa|Normal|Dragon|a=231|d=164|s=186}}
+{{PTS|0782|Jangmo-o|Dragon|a=102|d=108|s=128}}
+{{PTS|0783|Hakamo-o|Dragon|Fighting|a=145|d=162|s=146}}
+{{PTS|0784|Kommo-o|Dragon|Fighting|a=222|d=240|s=181}}
+{{PTS|0785|Tapu Koko|Electric|Fairy|a=250|d=181|s=172}}
+{{PTS|0786|Tapu Lele|Psychic|Fairy|a=259|d=208|s=172}}
+{{PTS|0787|Tapu Bulu|Grass|Fairy|a=249|d=215|s=172}}
+{{PTS|0788|Tapu Fini|Water|Fairy|a=189|d=254|s=172}}
+{{PTS|0789|Cosmog|Psychic|a=54|d=57|s=125}}
+{{PTS|0790|Cosmoem|Psychic|a=54|d=242|s=125}}
+{{PTS|0791|Solgaleo|Psychic|Steel|a=255|d=191|s=264}}
+{{PTS|0792|Lunala|Psychic|Ghost|a=255|d=191|s=264}}
+{{PTS|0793|Nihilego|Rock|Poison|a=249|d=210|s=240}}
+{{PTS|0794|Buzzwole|Bug|Fighting|a=236|d=196|s=216}}
+{{PTS|0795|Pheromosa|Bug|Fighting|a=316|d=85|s=174}}
+{{PTS|0796|Xurkitree|Electric|a=330|d=144|s=195}}
+{{PTS|0797|Celesteela|Steel|Flying|a=207|d=199|s=219}}
+{{PTS|0798|Kartana|Grass|Steel|a=323|d=182|s=139}}
+{{PTS|0799|Guzzlord|Dark|Dragon|a=188|d=99|s=440}}
+{{PTS|0800|Necrozma|Psychic|a=251|d=195|s=219}}
+{{PTS|0800|Necrozma|ci=Necrozma dusk mane|cl=Necrozma Dusk Mane|Psychic|Steel|a=277|d=220|s=200}}
+{{PTS|0800|Necrozma|ci=Necrozma dawn wings|cl=Necrozma Dawn Wings|Psychic|Ghost|a=277|d=220|s=200}}
+{{PTS|0802|Marshadow|Fighting|Ghost|a=265|d=190|s=207}}
+{{PTS|0803|Poipole|Poison|a=145|d=133|s=167}}
+{{PTS|0804|Naganadel|Poison|Dragon|a=263|d=159|s=177}}
+{{PTS|0805|Stakataka|Rock|Steel|a=213|d=298|s=156}}
+{{PTS|0806|Blacephalon|Fire|Ghost|a=315|d=148|s=142}}
+{{PTS|0808|Meltan|Steel|a=118|d=99|s=130}}
+{{PTS|0809|Melmetal|Steel|a=226|d=190|s=264}}
+{{PTS|0810|Grookey|Grass|a=122|d=91|s=137}}
+{{PTS|0811|Thwackey|Grass|a=165|d=134|s=172}}
+{{PTS|0812|Rillaboom|Grass|a=239|d=168|s=225}}
+{{PTS|0813|Scorbunny|Fire|a=132|d=79|s=137}}
+{{PTS|0814|Raboot|Fire|a=170|d=125|s=163}}
+{{PTS|0815|Cinderace|Fire|a=238|d=163|s=190}}
+{{PTS|0816|Sobble|Water|a=132|d=79|s=137}}
+{{PTS|0817|Drizzile|Water|a=186|d=113|s=163}}
+{{PTS|0818|Inteleon|Water|a=262|d=142|s=172}}
+{{PTS|0819|Skwovet|Normal|a=95|d=86|s=172}}
+{{PTS|0820|Greedent|Normal|a=160|d=156|s=260}}
+{{PTS|0831|Wooloo|Normal|a=76|d=97|s=123}}
+{{PTS|0832|Dubwool|Normal|a=159|d=198|s=176}}
+{{PTS|0848|Toxel|Electric|Poison|a=97|d=65|s=120}}
+{{PTS|0849|Toxtricity|Electric|Poison|a=224|d=140|s=181}}
+{{PTS|0854|Sinistea|Ghost|a=134|d=96|s=120}}
+{{PTS|0855|Polteageist|Ghost|a=248|d=189|s=155}}
+{{PTS|0856|Hatenna|Psychic|a=98|d=93|s=123}}
+{{PTS|0857|Hattrem|Psychic|a=153|d=133|s=149}}
+{{PTS|0858|Hatterene|Psychic|Fairy|a=237|d=182|s=149}}
+{{PTS|0862|Obstagoon|Dark|Normal|a=180|d=194|s=212}}
+{{PTS|0863|Perrserker|Steel|a=195|d=162|s=172}}
+{{PTS|0864|Cursola|Ghost|a=253|d=182|s=155}}
+{{PTS|0865|Sirfetch'd|Fighting|a=248|d=176|s=158}}
+{{PTS|0866|Mr. Rime|Ice|Psychic|a=212|d=179|s=190}}
+{{PTS|0867|Runerigus|Ground|Ghost|a=163|d=237|s=151}}
+{{PTS|0870|Falinks|Fighting|a=193|d=170|s=163}}
+{{PTS|0874|Stonjourner|Rock|a=222|d=182|s=225}}
+{{PTS|0877|Morpeko|Electric|Dark|a=192|d=121|s=151}}
+{{PTS|0885|Dreepy|Dragon|Ghost|a=117|d=61|s=99}}
+{{PTS|0886|Drakloak|Dragon|Ghost|a=163|d=105|s=169}}
+{{PTS|0887|Dragapult|Dragon|Ghost|a=266|d=170|s=204}}
+{{PTS|0888|Zacian|Fairy|a=254|d=236|s=192}}
+{{PTS|0889|Zamazenta|Fighting|a=254|d=236|s=192}}
+{{PTS|0893|Zarude|Dark|Grass|a=242|d=215|s=233}}
+{{PTS|0894|Regieleki|Electric|a=250|d=125|s=190}}
+{{PTS|0895|Regidrago|Dragon|a=202|d=101|s=400}}
+{{PTS|0899|Wyrdeer|Normal|Psychic|a=206|d=145|s=230}}
+{{PTS|0900|Kleavor|Bug|Rock|a=253|d=174|s=172}}
+{{PTS|0901|Ursaluna|Ground|Normal|a=243|d=181|s=277}}
+{{PTS|0903|Sneasler|Fighting|Poison|a=259|d=158|s=190}}
+{{PTS|0904|Overqwil|Dark|Poison|a=222|d=171|s=198}}
+{{PTS|0905|Enamorus|cl=Incarnate Forme Enamorus|Fairy|Flying|a=281|d=162|s=179}}
+<!--{{PTS|0905|Enamorus|ci=Enamorus therian|cl=Therian Forme Enamorus|Fairy|Flying|a=250|d=201|s=179}}-->
+{{PTS|0906|Sprigatito|Grass|a=116|d=99|s=120}}
+{{PTS|0907|Floragato|Grass|a=157|d=128|s=156}}
+{{PTS|0908|Meowscarada|Grass|Dark|a=233|d=153|s=183}}
+{{PTS|0909|Fuecoco|Fire|a=112|d=96|s=167}}
+{{PTS|0910|Crocalor|Fire|a=162|d=134|s=191}}
+{{PTS|0911|Skeledirge|Fire|Ghost|a=207|d=178|s=232}}
+{{PTS|0912|Quaxly|Water|a=120|d=86|s=146}}
+{{PTS|0913|Quaxwell|Water|a=162|d=123|s=172}}
+{{PTS|0914|Quaquaval|Water|Fighting|a=236|d=159|s=198}}
+{{PTS|0915|Lechonk|Normal|a=81|d=79|s=144}}
+{{PTS|0916|Oinkologne|cl=Male Oinkologne|Normal|a=186|d=153|s=242}}
+{{PTS|0916|Oinkologne|ci=Oinkologne female|cl=Female Oinkologne|Normal|a=169|d=162|s=251}}
+{{PTS|0919|Nymble|Bug|a=81|d=65|s=107}}
+{{PTS|0920|Lokix|Bug|Dark|a=199|d=144|s=174}}
+{{PTS|0921|Pawmi|Electric|a=95|d=45|s=128}}
+{{PTS|0922|Pawmo|Electric|Fighting|a=147|d=82|s=155}}
+{{PTS|0923|Pawmot|Electric|Fighting|a=232|d=141|s=172}}
+{{PTS|0924|Tandemaus|Normal|a=98|d=90|s=137}}
+{{PTS|0925|Maushold|Normal|a=159|d=157|s=179}}
+{{PTS|0928|Smoliv|Grass|Normal|a=100|d=89|s=121}}
+{{PTS|0929|Dolliv|Grass|Normal|a=137|d=131|s=141}}
+{{PTS|0930|Arboliva|Grass|Normal|a=219|d=189|s=186}}
+{{PTS|0935|Charcadet|Fire|a=92|d=74|s=120}}
+{{PTS|0936|Armarouge|Fire|Psychic|a=234|d=185|s=198}}
+{{PTS|0937|Ceruledge|Fire|Ghost|a=239|d=189|s=181}}
+{{PTS|0938|Tadbulb|Electric|a=104|d=73|s=156}}
+{{PTS|0939|Bellibolt|Electric|a=184|d=165|s=240}}
+{{PTS|0960|Wiglett|Water|a=109|d=52|s=67}}
+{{PTS|0961|Wugtrio|Water|a=205|d=136|s=111}}
+{{PTS|0962|Bombirdier|Flying|Dark|a=198|d=172|s=172}}
+{{PTS|0965|Varoom|Steel|Poison|a=123|d=107|s=128}}
+{{PTS|0966|Revavroom|Steel|Poison|a=229|d=168|s=190}}
+{{PTS|0971|Greavard|Ghost|a=105|d=106|s=137}}
+{{PTS|0972|Houndstone|Ghost|a=186|d=195|s=176}}
+{{PTS|0974|Cetoddle|Ice|a=119|d=80|s=239}}
+{{PTS|0975|Cetitan|Ice|a=208|d=123|s=347}}
+{{PTS|0979|Annihilape|Fighting|Ghost|a=220|d=178|s=242}}
+{{PTS|0980|Clodsire|Poison|Ground|a=127|d=151|s=277}}
+{{PTS|0996|Frigibax|Dragon|Ice|a=134|d=86|s=163}}
+{{PTS|0997|Arctibax|Dragon|Ice|a=173|d=128|s=207}}
+{{PTS|0998|Baxcalibur|Dragon|Ice|a=254|d=168|s=229}}
+{{PTS|0999|Gimmighoul|ci=Gimmighoul roaming|Ghost|a=140|d=76|s=128}}
+{{PTS|1000|Gholdengo|Steel|Ghost|a=252|d=190|s=202|last=t}}
+|}
+[[Category:Listings]]

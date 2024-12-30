@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Bulbasaur",
+    "attack": 118,
+    "defense": 111,
+    "stamina": 128
+  },
+  {
+    "name": "Ivysaur",
+    "attack": 151,
+    "defense": 143,
+    "stamina": 155
+  },
+  {
+    "name": "Venusaur",
+    "attack": 198,
+    "defense": 189,
+    "stamina": 190
+  },
+  {
+    "name": "Charmander",
+    "attack": 116,
+    "defense": 93,
+    "stamina": 118
+  },
+  {
+    "name": "Charmeleon",
+    "attack": 158,
+    "defense": 126,
+    "stamina": 151
+  },
+  {
+    "name": "Charizard",
+    "attack": 223,
+    "defense": 173,
+    "stamina": 186
+  },
+  {
+    "name": "Squirtle",
+    "attack": 94,
+    "defense": 121,
+    "stamina": 127
+  },
+  {
+    "name": "Wartortle",
+    "attack": 126,
+    "defense": 155,
+    "stamina": 153
+  },
+  {
+    "name": "Blastoise",
+    "attack": 171,
+    "defense": 207,
+    "stamina": 188
+  },
+  {
+    "name": "Caterpie",
+    "attack": 55,
+    "defense": 55,
+    "stamina": 128
+  },
+  {
+    "name": "Metapod",
+    "attack": 45,
+    "defense": 80,
+    "stamina": 137
+  },
+  {
+    "name": "Butterfree",
+    "attack": 167,
+    "defense": 137,
+    "stamina": 155
+  },
+  {
+    "name": "Weedle",
+    "attack": 63,
+    "defense": 50,
+    "stamina": 120
+  },
+  {
+    "name": "Kakuna",
+    "attack": 46,
+    "defense": 75,
+    "stamina": 128
+  },
+  {
+    "name": "Beedrill",
+    "attack": 169,
+    "defense": 130,
+    "stamina": 163
+  },
+  {
+    "name": "Pidgey",
+    "attack": 85,
+    "defense": 73,
+    "stamina": 120
+  },
+  {
+    "name": "Pidgeotto",
+    "attack": 117,
+    "defense": 105,
+    "stamina": 160
+  },
+  {
+    "name": "Pidgeot",
+    "attack": 166,
+    "defense": 154,
+    "stamina": 195
+  },
+  {
+    "name": "Rattata",
+    "attack": 103,
+    "defense": 70,
+    "stamina": 102
+  },
+  {
+    "name": "Alolan Rattata",
+    "attack": 103,
+    "defense": 70,
+    "stamina": 102
+  }
+]

@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 20px auto;
+  max-width: 800px;
+  width: 95%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-section, .results-section {
+  display: block;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-section input[type="number"],
+.input-section input[type="text"] {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-section button {
+  display: block;
+  padding: 10px 20px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius:4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.input-section button:hover {
+  background: #218838;
+}
+
+.results-section {
+  margin: 20px auto;
+}
+
+.results-section h2 {
+  margin-top: 0;
+}
+
+.results-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.results-section th, .results-section td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.results-section th {
+  background: #eee;
+}
+
+.no-results {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #555;
+}
+
+.highlight {
+  background: #ffd700;
+}
