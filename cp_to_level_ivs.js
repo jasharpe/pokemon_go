@@ -196,32 +196,58 @@ function updateUrlParams() {
   history.replaceState({}, '', newUrl);
 }
 
-function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
-  let best = null;
-  for (let dl = 2; dl <= 102; dl++) {
-    for (let a = 0; a <= 15; a++) {
-      for (let d = 0; a <= 15; d++) {
-        for (let s = 0; s <= 15; s++) {
-          const atk = baseAtk + a;
-          const def = baseDef + d;
-          const sta = baseSta + s;
-          const cpm = DOUBLED_LEVEL_TO_CPM[dl];
-          // CP formula with cpm^2
-          const cp = Math.floor(Math.max(10, atk * Math.sqrt(def) * Math.sqrt(sta) * cpm * cpm / 10));
-          if (cp <= cpLimit) {
-            // Stat product with cpm^3
-            const product = (atk * cpm) * (def * cpm) * (sta * cpm);
-            if (!best || product > best.product) {
-              best = { level: dl / 2, a, d, s, product };
-            }
-          }
-          if (atk == 0 && def == 0 && sta == 0 && cp > cpLimit) {
-            break;
-          }
+let precomputedCombos = null;
+function prepareCombos(baseA, baseD, baseS) {
+  if (!precomputedCombos) {
+    // Precompute all possible IV combos and store partial CP score
+    const combos = [];
+    for (let aIV = 0; aIV <= 15; aIV++) {
+      for (let dIV = 0; dIV <= 15; dIV++) {
+        for (let sIV = 0; sIV <= 15; sIV++) {
+          const a = baseA + aIV;
+          const d = baseD + dIV;
+          const s = baseS + sIV;
+          combos.push({
+            aIV, dIV, sIV,
+            a, d, s,
+            baseVal: a * Math.sqrt(d) * Math.sqrt(s)
+          });
         }
       }
     }
+    // Sort once by partial CP score ascending
+    precomputedCombos = combos.sort((x,y) => x.baseVal - y.baseVal);
   }
+}
+
+function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
+  prepareCombos(baseAtk, baseDef, baseSta);
+
+  let best = null;
+  // Loop over all levels
+  for (let dl = 2; dl <= 102; dl++) {
+    const cpm = DOUBLED_LEVEL_TO_CPM[dl];
+    if (!cpm) continue;
+    // Using partial CP limit => baseVal <= M
+    const M = (10 * cpLimit) / (cpm * cpm);
+    // Find the cutoff in precomputedCombos with binary search
+    let left = 0, right = precomputedCombos.length;
+    while (left < right) {
+      const mid = (left + right) >>> 1;
+      if (precomputedCombos[mid].baseVal <= M) left = mid + 1;
+      else right = mid;
+    }
+    // Now check combos up to left
+    for (let i = 0; i < left; i++) {
+      const c = precomputedCombos[i];
+      // Full product with cpm^3
+      const product = (c.a * cpm) * (c.d * cpm) * (c.s * cpm);
+      if (!best || product > best.product) {
+        best = { level: dl / 2, a: c.aIV, d: c.dIV, s: c.sIV, product };
+      }
+    }
+  }
+  console.log(best)
   return best;
 }
 
@@ -245,7 +271,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
 
   const bestGL = computeBestIVsForLeague(attack, defense, stamina, 1500);
-  //const bestUL = computeBestIVsForLeague(attack, defense, stamina, 2500);
+  const bestUL = computeBestIVsForLeague(attack, defense, stamina, 2500);
 
   if (bestGL) {
     document.getElementById('gl-ivs').value = `${bestGL.a}/${bestGL.d}/${bestGL.s}`;
