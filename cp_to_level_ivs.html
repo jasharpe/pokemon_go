@@ -7,7 +7,7 @@
 <title>Pokemon Go CP to Possible Levels/IVs Calculator</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.02.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.9/autoComplete.min.js"></script>
 </head>
 <body>
@@ -15,8 +15,6 @@
   <div class="input-section">
     <label for="cp">CP:</label>
     <input type="number" id="cp" placeholder="Enter CP" required min="10"/>
-
-    <p>Hint: Stats can be found at Pokémon GO Database, e.g. <a target="_blank" href="https://db.pokemongohub.net/pokemon/215/pvp">Sneasel</a>.</p>
 
     <label for="pokemon">Select a Pokemon:</label>
     <div class="autoComplete_wrapper">
@@ -32,18 +30,23 @@
     <label for="stamina">Base Stamina:</label>
     <input type="number" id="stamina" placeholder="Enter base stamina stat" required min="1" />
 
-    <label for="gl-ivs">Best Great League IVs (optional, format N/N/N):</label>
-    <input type="text" id="gl-ivs" placeholder="e.g. 0/15/15" />
-
-    <label for="ul-ivs">Best Ultra League IVs (optional, format N/N/N):</label>
-    <input type="text" id="ul-ivs" placeholder="e.g. 0/14/13" />
-
     <button id="calculateBtn">Calculate</button>
   </div>
 
   <div class="results-section">
-    <h2>Possible Combinations</h2>
-    <div id="results"></div>
+    <h2>All Possible Level/IV Combinations &plus; League Rankings</h2>
+    <small>Table is sorted by from best to worst ranking in ANY league</small>
+    <div id="results">
+      <table></table>
+    </div>
+    <small>GL = Great League (max CP 1500), UL = Ultra League (max CP 2500), ML = Master League (no max CP), MSP = Max Stat Product (bigger is better)</small>
+  </div>
+
+  <div>
+    Pokemon stats from
+    <a href="https://pokemongo.fandom.com/wiki/List_of_Pok%C3%A9mon_by_statistics">Pokémon GO Wiki</a>
+    available under
+    <a href="https://www.fandom.com/licensing">CC-BY-SA</a>.
   </div>
 
 <script src="cp_to_level_ivs.js"></script>

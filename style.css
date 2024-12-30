@@ -31,6 +31,8 @@ h1 {
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #pokemon {
@@ -90,4 +92,8 @@ h1 {
 
 .highlight {
   background: #ffd700;
+}
+
+.autoComplete_wrapper {
+  margin-bottom: 5px;
 }

@@ -160,12 +160,6 @@ function parseUrlParams() {
 
   const staVal = params.get('stamina');
   if (staVal !== null) document.getElementById('stamina').value = staVal;
-
-  const glVal = params.get('gl_ivs');
-  if (glVal !== null) document.getElementById('gl-ivs').value = glVal;
-
-  const ulVal = params.get('ul_ivs');
-  if (ulVal !== null) document.getElementById('ul-ivs').value = ulVal;
 }
 
 /**
@@ -180,16 +174,12 @@ function updateUrlParams() {
   const atkVal = document.getElementById('attack').value.trim();
   const defVal = document.getElementById('defense').value.trim();
   const staVal = document.getElementById('stamina').value.trim();
-  const glVal = document.getElementById('gl-ivs').value.trim();
-  const ulVal = document.getElementById('ul-ivs').value.trim();
 
   // Set or delete each parameter only if there is a value
   if (cpVal)  params.set('cp', cpVal);
   if (atkVal) params.set('attack', atkVal);
   if (defVal) params.set('defense', defVal);
   if (staVal) params.set('stamina', staVal);
-  if (glVal)  params.set('gl_ivs', glVal);
-  if (ulVal)  params.set('ul_ivs', ulVal);
 
   // Replace the current history state with the updated query string
   const newUrl = window.location.pathname + '?' + params.toString();
@@ -219,49 +209,75 @@ function prepareCombos(baseA, baseD, baseS) {
   }
 }
 
-function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
-  prepareCombos(baseAtk, baseDef, baseSta);
-  let best = null;
-  for (let dl = 2; dl <= 102; dl++) {
-    const cpm = DOUBLED_LEVEL_TO_CPM[dl];
-    if (!cpm) continue;
-    const cpmSq = cpm * cpm;
-    // Binary search for max i s.t. floor(aSqrtDS * cpmSq / 10) <= cpLimit
-    let left = 0, right = precomputedCombos.length;
-    while (left < right) {
-      const mid = (left + right) >>> 1;
-      const testCP = Math.floor(precomputedCombos[mid].aSqrtDS * cpmSq / 10);
-      if (testCP <= cpLimit) left = mid + 1;
-      else right = mid;
-    }
-    // Check combos up to left
-    for (let i = 0; i < left; i++) {
-      const c = precomputedCombos[i];
-      const product = c.a * c.d * cpm * cpm * Math.floor(c.s * cpm);
-      if (!best || product > best.product) {
-        best = { level: dl / 2, cp: Math.floor(c.aSqrtDS * cpmSq / 10), totalA: cpm * c.a, totalD: cpm * c.d, totalS: Math.floor(c.s * cpm), a: c.aIV, d: c.dIV, s: c.sIV, product };
-      }
-    }
-  }
-  console.log(best);
-  return best;
-}
-
 function computeStatProduct(stats) {
   return stats.attack * stats.defense * Math.floor(stats.stamina);
 }
 
-function findBestProducts(baseAtk, baseDef, baseSta) {
-  const bestGL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 1500);
-  const bestUL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 2500);
+function rankAllIVs(baseAtk, baseDef, baseSta, cpLimit) {
+  const products = [];
+  const MAX_LEVEL = 50;
+  for (let a = 0; a <= 15; a++) {
+    for (let d = 0; d <= 15; d++) {
+      STAMINA: for (let s = 0; s <= 15; s++) {
+        var last_product = null;
+        for (let dl = 2; dl <= 2 * MAX_LEVEL; dl++) {
+          const cpm = DOUBLED_LEVEL_TO_CPM[dl];
+          if (!cpm) {
+            console.error('No CPM for level', dl);
+            continue;
+          }
+          const testCP = Math.floor((baseAtk + a) * Math.sqrt(baseDef + d) * Math.sqrt(baseSta + s) * cpm * cpm / 10);
+          if (testCP > cpLimit) {
+            products.push({
+              ivs: `${a}/${d}/${s}`,
+              double_level: dl - 1,
+              product: last_product,
+            });
+            continue STAMINA;
+          }
+          last_product = (baseAtk + a) * (baseDef + d) * cpm * cpm * Math.floor((baseSta + s) * cpm);
+        }
+        products.push({
+          ivs: `${a}/${d}/${s}`,
+          double_level: 2 * MAX_LEVEL,
+          product: last_product,
+        });
+      }
+    }
+  }
+  const reverseSortedProducts = products.sort((a, b) => b.product - a.product);
+  console.log(reverseSortedProducts);
+  const rankedProducts = reverseSortedProducts.map((p, i, arr) => ({
+    ...p,
+    rank: (i > 0 && arr[i - 1].product === p.product) ? null: i + 1,
+  })).map((p, i, arr) => {
+    if (p.rank === null && i > 0) {
+      p.rank = arr[i - 1].rank;
+    }
+    return p;
+  });
+  const ivsToRankedMap = rankedProducts.reduce((acc, p) => {
+    acc[p.ivs] = p;
+    return acc;
+  }, {});
+  return {
+    bestProduct: rankedProducts[0].product,
+    ivsToRankedMap,
+  };
+}
+
+function rankAllLeagues(baseAtk, baseDef, baseSta) {
+  const glRanks = rankAllIVs(baseAtk, baseDef, baseSta, 1500);
+  console.log(glRanks);
+  const ulRanks = rankAllIVs(baseAtk, baseDef, baseSta, 2500);
+  console.log(ulRanks);
+  const mlRanks = rankAllIVs(baseAtk, baseDef, baseSta, 10000);
+  console.log(mlRanks);
 
   return {
-    GL: bestGL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestGL.a, bestGL.d, bestGL.s), bestGL.level * 2)) : null,
-    GLLevel: bestGL ? bestGL.level : null,
-    UL: bestUL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestUL.a, bestUL.d, bestUL.s), bestUL.level * 2)) : null,
-    ULLevel: bestUL ? bestUL.level : null,
-    ML: computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, 15, 15, 15), 100)), // Level 50
-    MLLevel: 50,
+    glRanks,
+    ulRanks,
+    mlRanks,
   };
 }
 
@@ -280,54 +296,48 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   }
 
   const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
-  const bestProducts = findBestProducts(attack, defense, stamina);
+  const leagueRanks = rankAllLeagues(attack, defense, stamina);
 
   if (results.length === 0) {
       resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
       return;
   }
 
-  // Compute stat products and percentages
+  // Compute stat products and percentiles
+  console.log(results);
   let processedResults = results.map(r => {
-      const stats = withIVs(attack, defense, stamina, ...r.IVs.split('/').map(Number));
-      const glAdjStats = levelAdjusted(stats, bestProducts.GLLevel * 2);
-      const glProduct = computeStatProduct(glAdjStats);
-      const ulAdjStats = levelAdjusted(stats, bestProducts.ULLevel * 2);
-      const ulProduct = computeStatProduct(ulAdjStats);
-      const mlAdjStats = levelAdjusted(stats, 100);
-      const mlProduct = computeStatProduct(mlAdjStats);
+    const glResult = leagueRanks.glRanks.ivsToRankedMap[r.IVs];
+    const glRank = glResult.rank;
+    const glProductPercent = (glResult.product / leagueRanks.glRanks.bestProduct * 100).toFixed(2);
+    const ulResult = leagueRanks.ulRanks.ivsToRankedMap[r.IVs];
+    const ulRank = ulResult.rank;
+    const ulProductPercent = (ulResult.product / leagueRanks.ulRanks.bestProduct * 100).toFixed(2);
+    const mlResult = leagueRanks.mlRanks.ivsToRankedMap[r.IVs];
+    const mlRank = mlResult.rank;
+    const mlProductPercent = (mlResult.product / leagueRanks.mlRanks.bestProduct * 100).toFixed(2);
 
-      if (glProduct > bestProducts.GL) {
-        console.log(stats)
-        console.log(r.IVs)
-        console.log(bestProducts.GLLevel)
-        console.log(glAdjStats)
-        console.log(glProduct)
-        console.log(bestProducts.GL)
-        console.log(cpFormula(glAdjStats.attack, glAdjStats.defense, glAdjStats.stamina))
-      }
-      const glPercent = bestProducts.GL ? (glProduct / bestProducts.GL * 100).toFixed(2) : 'N/A';
-      const ulPercent = bestProducts.UL ? (ulProduct / bestProducts.UL * 100).toFixed(2) : 'N/A';
-      const mlPercent = bestProducts.ML ? (mlProduct / bestProducts.ML * 100).toFixed(2) : 'N/A';
-
-      return {
-          IVs: r.IVs,
-          glPercent,
-          ulPercent,
-          mlPercent
-      };
+    return {
+      level: r.level,
+      IVs: r.IVs,
+      glRank,
+      glProductPercent,
+      ulRank,
+      ulProductPercent,
+      mlRank,
+      mlProductPercent,
+    };
   });
 
-  // Sort by highest percentage in any league
+  // Sort by lowest rank in any league.
   processedResults.sort((a, b) => {
-      const maxA = Math.max(a.glPercent === 'N/A' ? 0 : parseFloat(a.glPercent), a.ulPercent === 'N/A' ? 0 : parseFloat(a.ulPercent), a.mlPercent === 'N/A' ? 0 : parseFloat(a.mlPercent));
-      const maxB = Math.max(b.glPercent === 'N/A' ? 0 : parseFloat(b.glPercent), b.ulPercent === 'N/A' ? 0 : parseFloat(b.ulPercent), b.mlPercent === 'N/A' ? 0 : parseFloat(b.mlPercent));
-      return maxB - maxA;
+      const minA = Math.min(a.glRank, a.ulRank, a.mlRank);
+      const minB = Math.min(b.glRank, b.ulRank, b.mlRank);
+      return minA - minB;
   });
 
-  let tableHtml = '<table><tr><th>IVs (Attack/Defense/Stamina)</th><th>Great League (%)</th><th>Ultra League (%)</th><th>Master League (%)</th></tr>';
+  let tableHtml = '<table><tr><th>Level</th><th>IVs (Atk / Def / Sta)</th><th>GL Rank (% of MSP)</th><th>UL Rank (% of MSP)</th><th>ML Rank (% of MSP)</th></tr>';
   processedResults.forEach(r => {
-      tableHtml += `<tr><td>${r.IVs}</td><td>${r.glPercent}</td><td>${r.ulPercent}</td><td>${r.mlPercent}</td></tr>`;
+    tableHtml += `<tr><td>${r.level}</td><td>${r.IVs}</td><td>${r.glRank}</td><td>${r.ulRank}</td><td>${r.mlRank}</td></tr>`;
   });
   tableHtml += '</table>';
 
@@ -335,8 +345,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 });
 
 // Attach event listeners for input changes so that the URL updates each time
-['cp','attack','defense','stamina','gl-ivs','ul-ivs'].forEach(id => {
-document.getElementById(id).addEventListener('input', updateUrlParams);
+['cp', 'attack', 'defense', 'stamina'].forEach(id => {
+  document.getElementById(id).addEventListener('input', updateUrlParams);
 });
 
 function initAutoComplete() {
@@ -344,7 +354,6 @@ function initAutoComplete() {
     .then(response => response.json())
     .then(data => {
       const autoCompleteJS = new autoComplete({
-        //selector: "#autoComplete",
         placeHolder: "Type to search Pokemon...",
         data: {
           src: data.map(p => p.name),
@@ -360,6 +369,7 @@ function initAutoComplete() {
                       document.getElementById('defense').value = p.defense;
                       document.getElementById('stamina').value = p.stamina;
                     }
+                    updateUrlParams();
                 }
             }
         }
