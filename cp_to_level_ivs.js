@@ -199,7 +199,6 @@ function updateUrlParams() {
 let precomputedCombos = null;
 function prepareCombos(baseA, baseD, baseS) {
   if (!precomputedCombos) {
-    // Precompute all possible IV combos and store partial CP score
     const combos = [];
     for (let aIV = 0; aIV <= 15; aIV++) {
       for (let dIV = 0; dIV <= 15; dIV++) {
@@ -208,46 +207,43 @@ function prepareCombos(baseA, baseD, baseS) {
           const d = baseD + dIV;
           const s = baseS + sIV;
           combos.push({
-            aIV, dIV, sIV,
             a, d, s,
-            baseVal: a * Math.sqrt(d) * Math.sqrt(s)
+            aIV, dIV, sIV,
+            aDS: a * d * s,
+            aSqrtDS: a * Math.sqrt(d) * Math.sqrt(s)
           });
         }
       }
     }
-    // Sort once by partial CP score ascending
-    precomputedCombos = combos.sort((x,y) => x.baseVal - y.baseVal);
+    precomputedCombos = combos.sort((x,y) => x.aSqrtDS - y.aSqrtDS);
   }
 }
 
 function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
   prepareCombos(baseAtk, baseDef, baseSta);
-
   let best = null;
-  // Loop over all levels
   for (let dl = 2; dl <= 102; dl++) {
     const cpm = DOUBLED_LEVEL_TO_CPM[dl];
     if (!cpm) continue;
-    // Using partial CP limit => baseVal <= M
-    const M = (10 * cpLimit) / (cpm * cpm);
-    // Find the cutoff in precomputedCombos with binary search
+    const cpmSq = cpm * cpm;
+    // Binary search for max i s.t. floor(aSqrtDS * cpmSq / 10) <= cpLimit
     let left = 0, right = precomputedCombos.length;
     while (left < right) {
       const mid = (left + right) >>> 1;
-      if (precomputedCombos[mid].baseVal <= M) left = mid + 1;
+      const testCP = Math.floor(precomputedCombos[mid].aSqrtDS * cpmSq / 10);
+      if (testCP <= cpLimit) left = mid + 1;
       else right = mid;
     }
-    // Now check combos up to left
+    // Check combos up to left
     for (let i = 0; i < left; i++) {
       const c = precomputedCombos[i];
-      // Full product with cpm^3
-      const product = (c.a * cpm) * (c.d * cpm) * (c.s * cpm);
+      const product = c.aDS * cpm * cpm * cpm;
       if (!best || product > best.product) {
-        best = { level: dl / 2, a: c.aIV, d: c.dIV, s: c.sIV, product };
+        best = { level: dl / 2, cp: Math.floor(c.aSqrtDS * cpmSq / 10), totalA: cpm * c.a, totalD: cpm * c.d, totalS: cpm * c.s, a: c.aIV, d: c.dIV, s: c.sIV, product };
       }
     }
   }
-  console.log(best)
+  console.log(best);
   return best;
 }
 
