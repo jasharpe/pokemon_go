@@ -160,6 +160,9 @@ function parseUrlParams() {
 
   const staVal = params.get('stamina');
   if (staVal !== null) document.getElementById('stamina').value = staVal;
+
+  const pokemonVal = params.get('pokemon');
+  if (pokemonVal !== null) document.getElementById('autoComplete').value = pokemonVal;
 }
 
 /**
@@ -174,12 +177,14 @@ function updateUrlParams() {
   const atkVal = document.getElementById('attack').value.trim();
   const defVal = document.getElementById('defense').value.trim();
   const staVal = document.getElementById('stamina').value.trim();
+  const pokemonVal = document.getElementById('autoComplete').value.trim();
 
   // Set or delete each parameter only if there is a value
   if (cpVal)  params.set('cp', cpVal);
   if (atkVal) params.set('attack', atkVal);
   if (defVal) params.set('defense', defVal);
   if (staVal) params.set('stamina', staVal);
+  if (pokemonVal) params.set('pokemon', pokemonVal);
 
   // Replace the current history state with the updated query string
   const newUrl = window.location.pathname + '?' + params.toString();
@@ -370,6 +375,7 @@ function initAutoComplete() {
                       document.getElementById('stamina').value = p.stamina;
                     }
                     updateUrlParams();
+                    document.getElementById('calculateBtn').click();
                 }
             }
         }
@@ -381,4 +387,14 @@ function initAutoComplete() {
 window.addEventListener('DOMContentLoaded', () => {
   parseUrlParams();
   initAutoComplete();
+  
+  // Check if all required stats are set and run the calculation
+  const cp = document.getElementById('cp').value.trim();
+  const attack = document.getElementById('attack').value.trim();
+  const defense = document.getElementById('defense').value.trim();
+  const stamina = document.getElementById('stamina').value.trim();
+  
+  if (cp && attack && defense && stamina) {
+    document.getElementById('calculateBtn').click();
+  }
 });
