@@ -237,9 +237,9 @@ function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
     // Check combos up to left
     for (let i = 0; i < left; i++) {
       const c = precomputedCombos[i];
-      const product = c.aDS * cpm * cpm * cpm;
+      const product = c.a * c.d * cpm * cpm * Math.floor(c.s * cpm);
       if (!best || product > best.product) {
-        best = { level: dl / 2, cp: Math.floor(c.aSqrtDS * cpmSq / 10), totalA: cpm * c.a, totalD: cpm * c.d, totalS: cpm * c.s, a: c.aIV, d: c.dIV, s: c.sIV, product };
+        best = { level: dl / 2, cp: Math.floor(c.aSqrtDS * cpmSq / 10), totalA: cpm * c.a, totalD: cpm * c.d, totalS: Math.floor(c.s * cpm), a: c.aIV, d: c.dIV, s: c.sIV, product };
       }
     }
   }
