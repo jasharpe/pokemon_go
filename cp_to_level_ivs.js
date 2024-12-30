@@ -260,5 +260,36 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 document.getElementById(id).addEventListener('input', updateUrlParams);
 });
 
-// Parse URL parameters on page load
-window.addEventListener('DOMContentLoaded', parseUrlParams);
+function initAutoComplete() {
+  fetch('pokemon_stats.json')
+    .then(response => response.json())
+    .then(data => {
+      const autoCompleteJS = new autoComplete({
+        //selector: "#autoComplete",
+        placeHolder: "Type to search Pokemon...",
+        data: {
+          src: data.map(p => p.name),
+        },
+       events: {
+            input: {
+                selection: (event) => {
+                    const selection = event.detail.selection.value;
+                    autoCompleteJS.input.value = selection;
+                    const p = data.find(item => item.name === selection);
+                    if (p) {
+                      document.getElementById('attack').value = p.attack;
+                      document.getElementById('defense').value = p.defense;
+                      document.getElementById('stamina').value = p.stamina;
+                    }
+                }
+            }
+        }
+      });
+    })
+    .catch(err => console.error(err));
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  parseUrlParams();
+  initAutoComplete();
+});

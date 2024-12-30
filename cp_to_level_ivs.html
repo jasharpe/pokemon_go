@@ -7,6 +7,8 @@
 <title>Pokemon Go CP to Possible Levels/IVs Calculator</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.9/dist/css/autoComplete.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.9/autoComplete.min.js"></script>
 </head>
 <body>
   <h1>Pokemon Go CP to Possible Levels/IVs Calculator</h1>
@@ -15,6 +17,11 @@
     <input type="number" id="cp" placeholder="Enter CP" required min="10"/>
 
     <p>Hint: Stats can be found at Pokémon GO Database, e.g. <a target="_blank" href="https://db.pokemongohub.net/pokemon/215/pvp">Sneasel</a>.</p>
+
+    <label for="pokemon">Select a Pokemon:</label>
+    <div class="autoComplete_wrapper">
+      <input id="autoComplete" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
+    </div>
 
     <label for="attack">Base Attack:</label>
     <input type="number" id="attack" placeholder="Enter base attack stat" required min="1" />
