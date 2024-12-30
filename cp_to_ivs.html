@@ -21,6 +21,45 @@
       Feedback? <a target="_blank" href="https://github.com/jasharpe/pokemon_go/issues">File an issue!</a>
     </small>
   </div>
+  <div>
+    <button id="helpToggleBtn">Help</button>
+    <div id="help-section" style="display: none;">
+      <p>This calculator helps you find all possible level and IV combinations for a Pokémon.
+
+      <p>This is usually useful during an encounter when you want to know if there's a chance
+      that the Pokemon is a hundo, or highly ranked in PVP for Great (GL) or Ultra league (UL).
+
+      <p>This may help inform decisions such as whether to use a Master Ball.
+
+      <p>Enter the observed <b>CP</b> and <b>Pokemon species</b>, check <b>Raid?</b>
+        if applicable (this will restrict results to the levels possible from a raid),
+        and results will appear.
+      
+      <p>Results are sorted to show you the best IVs first, and the table shows you how the
+        IVs rank in each league. Rank 1 is the best, and Rank 4096 is the worst.
+
+      <p>If a Pokemon is missing from the autocomplete list, you can enter its stats manually.
+
+      <p><b>Stat Product</b> (SP) is the product of the Pokemon's total stats:
+        attack x defense x stamina.
+        SP is proportional to <b>Total Damage Output</b> (TDO) which is one of the most
+        important metrics in PVP.
+      
+      <p>IVs are ranked by their best Stat Product achievable within the CP restrictions of each league.
+        This does not always produce the optimal IVs for every situation,
+        but this is how IVs are usually ranked.
+        The IVs that have the highest Stat Product are rank 1,
+        and the Stat Product of these IVs is called the Max Stat Product (MSP).
+      
+      <p>The <b>% of MSP</b> tells you how much Total Damage Output you are losing by using this
+        IV compared to the rank 1 IVs.
+        For example, 95% of MSP would mean you have 5% less TDO than the rank 1 IVs.
+
+      <p>The calculator will never show half levels, even though they may satisfy
+        certain CP/stat combinations, because wild Pokemon only spawn with integer
+        levels, not half levels.
+    </div>
+  </div>
   <div class="input-section">
     <label for="cp">CP:</label>
     <input type="number" id="cp" placeholder="Enter CP" required min="10"/>
@@ -52,22 +91,6 @@
     <div id="results">
       <table></table>
     </div>
-    <small class="definition"><b>GL:</b> Great League (max CP 1500)</small>
-    <small class="definition"><b>UL:</b> Ultra League (max CP 2500)</small>
-    <small class="definition"><b>ML:</b> Master League (no max CP)</small>
-    <small class="definition">
-      <b>% of MSP:</b> What percent of the "Maximum Stat Product" does this IV give at the optimal level?
-      Since TDO (Total Damage Output) is proportional to stat product, this essentially tells you
-      how much damage output you are losing by using this IV compared to the rank 1 IVs. For
-      example, 95% would mean you have 5% less TDO than the rank 1 IVs.
-    </small>
-    <small class="definition">
-      <b>How IVs are ranked:</b> IVs are ranked by their "Stat Product" (attack x defense x stamina) at
-      maximum level within each league, because stat product is proportional
-      to Total Damage Output (TDO) which is the most important metric in PVP.
-      This does not ALWAYS give the optimal IVs for every situation, but is how IVs
-      are usually ranked.
-    </small>
   </div>
 
   <div>
@@ -90,5 +113,19 @@
   </div>
 
 <script src="cp_to_ivs.js"></script>
+<script>
+  document.getElementById('helpToggleBtn').addEventListener('click', () => {
+    const helpSection = document.getElementById('help-section');
+    const btn = document.getElementById('helpToggleBtn');
+    if (helpSection.style.display === 'none') {
+      helpSection.style.display = 'block';
+      document.getElementById('helpToggleBtn').textContent = 'Help';
+    } else {
+      helpSection.style.display = 'none';
+      document.getElementById('helpToggleBtn').textContent = 'Help';
+    }
+    btn.classList.toggle('open');
+  });
+</script>
 </body>
 </html>
