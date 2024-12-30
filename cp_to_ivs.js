@@ -375,7 +375,9 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 
   let tableHtml = '<table><tr><th>Level</th><th>IVs (Atk / Def / Sta)</th><th>GL Rank (% of MSP)</th><th>UL Rank (% of MSP)</th><th>ML Rank (% of MSP)</th></tr>';
   processedResults.forEach(r => {
-    tableHtml += `<tr><td>${r.level}</td><td>${r.IVs}</td>` +
+    const isRank1 = (r.glRank === 1 || r.ulRank === 1 || r.mlRank === 1);
+    const highlightClass = isRank1 ? 'highlight' : '';
+    tableHtml += `<tr class="${highlightClass}"><td>${r.level}</td><td>${r.IVs}</td>` +
     (cp > 1500 ? '<td>N/A</td>' : `<td>${r.glRank} (${r.glProductPercent}%)</td>`) +  
     (cp > 2500 ? '<td>N/A</td>' : `<td>${r.ulRank} (${r.ulProductPercent}%)</td>`) +  
     `<td>${r.mlRank} (${r.mlProductPercent}%)</td>` +
