@@ -254,12 +254,14 @@ function computeStatProduct(stats) {
 function findBestProducts(baseAtk, baseDef, baseSta) {
   const bestGL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 1500);
   const bestUL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 2500);
-  const bestML = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 10000); // Hundo at level 50
 
   return {
     GL: bestGL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestGL.a, bestGL.d, bestGL.s), bestGL.level * 2)) : null,
+    GLLevel: bestGL ? bestGL.level : null,
     UL: bestUL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestUL.a, bestUL.d, bestUL.s), bestUL.level * 2)) : null,
-    ML: computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, 15, 15, 15), 100)) // Level 50
+    ULLevel: bestUL ? bestUL.level : null,
+    ML: computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, 15, 15, 15), 100)), // Level 50
+    MLLevel: 50,
   };
 }
 
@@ -268,9 +270,6 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const attack = parseInt(document.getElementById('attack').value, 10);
   const defense = parseInt(document.getElementById('defense').value, 10);
   const stamina = parseInt(document.getElementById('stamina').value, 10);
-
-  const glIvsInput = document.getElementById('gl-ivs').value.trim();
-  const ulIvsInput = document.getElementById('ul-ivs').value.trim();
 
   const resultsContainer = document.getElementById('results');
   resultsContainer.innerHTML = '';
@@ -291,12 +290,25 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   // Compute stat products and percentages
   let processedResults = results.map(r => {
       const stats = withIVs(attack, defense, stamina, ...r.IVs.split('/').map(Number));
-      const adjStats = levelAdjusted(stats, r.level * 2);
-      const product = computeStatProduct(adjStats);
+      const glAdjStats = levelAdjusted(stats, bestProducts.GLLevel * 2);
+      const glProduct = computeStatProduct(glAdjStats);
+      const ulAdjStats = levelAdjusted(stats, bestProducts.ULLevel * 2);
+      const ulProduct = computeStatProduct(ulAdjStats);
+      const mlAdjStats = levelAdjusted(stats, 100);
+      const mlProduct = computeStatProduct(mlAdjStats);
 
-      const glPercent = bestProducts.GL ? (product / bestProducts.GL * 100).toFixed(2) : 'N/A';
-      const ulPercent = bestProducts.UL ? (product / bestProducts.UL * 100).toFixed(2) : 'N/A';
-      const mlPercent = bestProducts.ML ? (product / bestProducts.ML * 100).toFixed(2) : 'N/A';
+      if (glProduct > bestProducts.GL) {
+        console.log(stats)
+        console.log(r.IVs)
+        console.log(bestProducts.GLLevel)
+        console.log(glAdjStats)
+        console.log(glProduct)
+        console.log(bestProducts.GL)
+        console.log(cpFormula(glAdjStats.attack, glAdjStats.defense, glAdjStats.stamina))
+      }
+      const glPercent = bestProducts.GL ? (glProduct / bestProducts.GL * 100).toFixed(2) : 'N/A';
+      const ulPercent = bestProducts.UL ? (ulProduct / bestProducts.UL * 100).toFixed(2) : 'N/A';
+      const mlPercent = bestProducts.ML ? (mlProduct / bestProducts.ML * 100).toFixed(2) : 'N/A';
 
       return {
           IVs: r.IVs,
