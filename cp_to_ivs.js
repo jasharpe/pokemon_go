@@ -305,6 +305,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const stamina = parseInt(document.getElementById('stamina').value, 10);
 
   const resultsContainer = document.getElementById('results');
+  const resultCount = document.getElementById('result-count');
+  resultCount.innerText = '';
   resultsContainer.innerHTML = 'Calculating...';
 
   const localCalcId = ++currentCalcId;
@@ -368,6 +370,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 
     if (localCalcId !== currentCalcId) return; // Abort if new calculation started
     resultsContainer.innerHTML = tableHtml;
+    resultCount.innerText = processedResults.length;
 
     // Adjust the table font size to fit within its container
     adjustTableFontSize();
