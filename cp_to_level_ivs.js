@@ -196,6 +196,35 @@ function updateUrlParams() {
   history.replaceState({}, '', newUrl);
 }
 
+function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
+  let best = null;
+  for (let dl = 2; dl <= 102; dl++) {
+    for (let a = 0; a <= 15; a++) {
+      for (let d = 0; a <= 15; d++) {
+        for (let s = 0; s <= 15; s++) {
+          const atk = baseAtk + a;
+          const def = baseDef + d;
+          const sta = baseSta + s;
+          const cpm = DOUBLED_LEVEL_TO_CPM[dl];
+          // CP formula with cpm^2
+          const cp = Math.floor(Math.max(10, atk * Math.sqrt(def) * Math.sqrt(sta) * cpm * cpm / 10));
+          if (cp <= cpLimit) {
+            // Stat product with cpm^3
+            const product = (atk * cpm) * (def * cpm) * (sta * cpm);
+            if (!best || product > best.product) {
+              best = { level: dl / 2, a, d, s, product };
+            }
+          }
+          if (atk == 0 && def == 0 && sta == 0 && cp > cpLimit) {
+            break;
+          }
+        }
+      }
+    }
+  }
+  return best;
+}
+
 document.getElementById('calculateBtn').addEventListener('click', () => {
   const cp = parseInt(document.getElementById('cp').value, 10);
   const attack = parseInt(document.getElementById('attack').value, 10);
@@ -214,6 +243,16 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   }
 
   const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
+
+  const bestGL = computeBestIVsForLeague(attack, defense, stamina, 1500);
+  //const bestUL = computeBestIVsForLeague(attack, defense, stamina, 2500);
+
+  if (bestGL) {
+    document.getElementById('gl-ivs').value = `${bestGL.a}/${bestGL.d}/${bestGL.s}`;
+  }
+  if (bestUL) {
+    document.getElementById('ul-ivs').value = `${bestUL.a}/${bestUL.d}/${bestUL.s}`;
+  }
 
   if (results.length === 0) {
       resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
