@@ -337,7 +337,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 
   let tableHtml = '<table><tr><th>Level</th><th>IVs (Atk / Def / Sta)</th><th>GL Rank (% of MSP)</th><th>UL Rank (% of MSP)</th><th>ML Rank (% of MSP)</th></tr>';
   processedResults.forEach(r => {
-    tableHtml += `<tr><td>${r.level}</td><td>${r.IVs}</td><td>${r.glRank}</td><td>${r.ulRank}</td><td>${r.mlRank}</td></tr>`;
+    tableHtml += `<tr><td>${r.level}</td><td>${r.IVs}</td><td>${r.glRank} (${r.glProductPercent}%)</td><td>${r.ulRank} (${r.ulProductPercent}%)</td><td>${r.mlRank} (${r.mlProductPercent}%)</td></tr>`;
   });
   tableHtml += '</table>';
 
