@@ -319,6 +319,8 @@ function adjustTableFontSize() {
   }
 }
 
+let currentCalcId = 0;
+
 document.getElementById('calculateBtn').addEventListener('click', () => {
   const cp = parseInt(document.getElementById('cp').value, 10);
   const attack = parseInt(document.getElementById('attack').value, 10);
@@ -326,69 +328,73 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const stamina = parseInt(document.getElementById('stamina').value, 10);
 
   const resultsContainer = document.getElementById('results');
-  resultsContainer.innerHTML = '';
+  resultsContainer.innerHTML = 'Calculating...';
 
-  if (isNaN(cp) || isNaN(attack) || isNaN(defense) || isNaN(stamina)) {
+  const localCalcId = ++currentCalcId;
+
+  setTimeout(() => {
+    if (isNaN(cp) || isNaN(attack) || isNaN(defense) || isNaN(stamina)) {
       resultsContainer.innerHTML = '<div class="no-results">Please enter valid numbers for all required fields.</div>';
       return;
-  }
+    }
+    const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
+    const leagueRanks = rankAllLeagues(attack, defense, stamina);
 
-  const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
-  const leagueRanks = rankAllLeagues(attack, defense, stamina);
-
-  if (results.length === 0) {
+    if (results.length === 0) {
       resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
       return;
-  }
+    }
 
-  // Compute stat products and percentiles
-  console.log(results);
-  let processedResults = results.map(r => {
-    const glResult = leagueRanks.glRanks.ivsToRankedMap[r.IVs];
-    const glRank = glResult.rank;
-    const glProductPercent = (glResult.product / leagueRanks.glRanks.bestProduct * 100).toFixed(2);
-    const ulResult = leagueRanks.ulRanks.ivsToRankedMap[r.IVs];
-    const ulRank = ulResult.rank;
-    const ulProductPercent = (ulResult.product / leagueRanks.ulRanks.bestProduct * 100).toFixed(2);
-    const mlResult = leagueRanks.mlRanks.ivsToRankedMap[r.IVs];
-    const mlRank = mlResult.rank;
-    const mlProductPercent = (mlResult.product / leagueRanks.mlRanks.bestProduct * 100).toFixed(2);
+    // Compute stat products and percentiles
+    console.log(results);
+    let processedResults = results.map(r => {
+      const glResult = leagueRanks.glRanks.ivsToRankedMap[r.IVs];
+      const glRank = glResult.rank;
+      const glProductPercent = (glResult.product / leagueRanks.glRanks.bestProduct * 100).toFixed(2);
+      const ulResult = leagueRanks.ulRanks.ivsToRankedMap[r.IVs];
+      const ulRank = ulResult.rank;
+      const ulProductPercent = (ulResult.product / leagueRanks.ulRanks.bestProduct * 100).toFixed(2);
+      const mlResult = leagueRanks.mlRanks.ivsToRankedMap[r.IVs];
+      const mlRank = mlResult.rank;
+      const mlProductPercent = (mlResult.product / leagueRanks.mlRanks.bestProduct * 100).toFixed(2);
 
-    return {
-      level: r.level,
-      IVs: r.IVs,
-      glRank,
-      glProductPercent,
-      ulRank,
-      ulProductPercent,
-      mlRank,
-      mlProductPercent,
-    };
-  });
+      return {
+        level: r.level,
+        IVs: r.IVs,
+        glRank,
+        glProductPercent,
+        ulRank,
+        ulProductPercent,
+        mlRank,
+        mlProductPercent,
+      };
+    });
 
-  // Sort by lowest rank in any league.
-  processedResults.sort((a, b) => {
-      const minA = Math.min(a.glRank, a.ulRank, a.mlRank);
-      const minB = Math.min(b.glRank, b.ulRank, b.mlRank);
-      return minA - minB;
-  });
+    // Sort by lowest rank in any league.
+    processedResults.sort((a, b) => {
+        const minA = Math.min(a.glRank, a.ulRank, a.mlRank);
+        const minB = Math.min(b.glRank, b.ulRank, b.mlRank);
+        return minA - minB;
+    });
 
-  let tableHtml = '<table><tr><th>Level</th><th>IVs (Atk / Def / Sta)</th><th>GL Rank (% of MSP)</th><th>UL Rank (% of MSP)</th><th>ML Rank (% of MSP)</th></tr>';
-  processedResults.forEach(r => {
-    const isRank1 = (r.glRank === 1 || r.ulRank === 1 || r.mlRank === 1);
-    const highlightClass = isRank1 ? 'highlight' : '';
-    tableHtml += `<tr class="${highlightClass}"><td>${r.level}</td><td>${r.IVs}</td>` +
-    (cp > 1500 ? '<td>N/A</td>' : `<td>${r.glRank} (${r.glProductPercent}%)</td>`) +  
-    (cp > 2500 ? '<td>N/A</td>' : `<td>${r.ulRank} (${r.ulProductPercent}%)</td>`) +  
-    `<td>${r.mlRank} (${r.mlProductPercent}%)</td>` +
-    `</tr>`;
-  });
-  tableHtml += '</table>';
+    let tableHtml = '<table><tr><th>Level</th><th>IVs (Atk / Def / Sta)</th><th>GL Rank (% of MSP)</th><th>UL Rank (% of MSP)</th><th>ML Rank (% of MSP)</th></tr>';
+    processedResults.forEach(r => {
+      const isRank1 = (r.glRank === 1 || r.ulRank === 1 || r.mlRank === 1);
+      const highlightClass = isRank1 ? 'highlight' : '';
+      tableHtml += `<tr class="${highlightClass}"><td>${r.level}</td><td>${r.IVs}</td>` +
+      (cp > 1500 ? '<td>N/A</td>' : `<td>${r.glRank} (${r.glProductPercent}%)</td>`) +  
+      (cp > 2500 ? '<td>N/A</td>' : `<td>${r.ulRank} (${r.ulProductPercent}%)</td>`) +  
+      `<td>${r.mlRank} (${r.mlProductPercent}%)</td>` +
+      `</tr>`;
+    });
+    tableHtml += '</table>';
 
-  resultsContainer.innerHTML = tableHtml;
+    if (localCalcId !== currentCalcId) return; // Abort if new calculation started
+    resultsContainer.innerHTML = tableHtml;
 
-  // Adjust the table font size to fit within its container
-  adjustTableFontSize();
+    // Adjust the table font size to fit within its container
+    adjustTableFontSize();
+  }, 0);
 });
 
 // Attach event listeners for input changes so that the URL updates each time
