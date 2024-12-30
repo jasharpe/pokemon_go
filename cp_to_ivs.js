@@ -307,7 +307,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const resultsContainer = document.getElementById('results');
   const resultCount = document.getElementById('result-count');
   resultCount.innerText = '';
-  resultsContainer.innerHTML = 'Calculating...';
+  resultsContainer.innerHTML = '... calculating ...';
 
   const localCalcId = ++currentCalcId;
 
@@ -320,6 +320,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
     const leagueRanks = rankAllLeagues(attack, defense, stamina);
 
     if (results.length === 0) {
+      if (localCalcId !== currentCalcId) return; // Abort if new calculation started
       resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
       return;
     }

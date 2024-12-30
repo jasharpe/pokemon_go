@@ -131,3 +131,7 @@ h1 small {
   content: '▼ ';
   font-family: 'monospace';
 }
+
+#results {
+  margin-top: 10px;
+}
