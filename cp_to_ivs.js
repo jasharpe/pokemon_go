@@ -127,7 +127,7 @@ function findPossibleLevelsAndIVs(baseAttack, baseDefense, baseStamina, targetCP
   const raidMode = document.getElementById('raidCheckbox').checked;
   let results = [];
   // If raidMode is on, only check doubled_level 40 (Level 20) and 50 (Level 25).
-  const levels = raidMode ? [40, 50] : [...Array(69).keys()].map(i => i + 2);
+  const levels = raidMode ? [40, 50] : [...Array(50).keys()].map(i => (i + 1) * 2);
 
   for (let attackIV = 0; attackIV <= 15; attackIV++) {
     for (let defenseIV = 0; defenseIV <= 15; defenseIV++) {
