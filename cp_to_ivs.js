@@ -390,15 +390,6 @@ function initAutoComplete() {
 
 window.addEventListener('DOMContentLoaded', () => {
   parseUrlParams();
-  initAutoComplete();
-  
-  // Check if all required stats are set and run the calculation
-  const cp = document.getElementById('cp').value.trim();
-  const attack = document.getElementById('attack').value.trim();
-  const defense = document.getElementById('defense').value.trim();
-  const stamina = document.getElementById('stamina').value.trim();
-  
-  if (cp && attack && defense && stamina) {
-    document.getElementById('calculateBtn').click();
-  }
+  initAutoComplete();  
+  document.getElementById('calculateBtn').click();
 });

@@ -87,8 +87,8 @@ h1 {
 .no-results {
   text-align: center;
   font-weight: bold;
-  margin-top: 20px;
-  color: #555;
+  margin: 20px 0;
+  color: #ce2222;
 }
 
 .highlight {
@@ -102,4 +102,9 @@ h1 {
 .subtitle {
   text-align: center;
   margin: 15px 0;
+}
+
+.definition {
+  display: block;
+  margin: 5px 0;
 }

@@ -13,10 +13,13 @@
 <body>
   <h1>Pokemon Go CP to Possible IVs Calculator</h1>
   <div class="subtitle">
+    <small style="display: block;">
+      <a href="/">Back</a>
+    </small>
     <small>Created by <a target="_blank" href="https://www.youtube.com/@TheExcellentPokedex">The Excellent Pokédex</a></small>
     <small style="display: block;">
       Feedback to <a href="mailto:the.excellent.pokedex@gmail.com">the.excellent.pokedex@gmail.com</a>
-    </small></small>
+    </small>
   </div>
   <div class="input-section">
     <label for="cp">CP:</label>
@@ -45,14 +48,35 @@
     <div id="results">
       <table></table>
     </div>
-    <small>GL = Great League (max CP 1500), UL = Ultra League (max CP 2500), ML = Master League (no max CP), MSP = Max Stat Product (bigger is better)</small>
+    <small class="definition">GL = Great League (max CP 1500)</small>
+    <small class="definition">UL = Ultra League (max CP 2500)</small>
+    <small class="definition">ML = Master League (no max CP)</small>
+    <small class="definition">
+      % of MSP = What percent of the "Maximum Stat Product" does this IV give at the optimal level?
+      Since TDO (Total Damage Output) is proportional to stat product, this essentially tells you
+      how much damage output you are losing by using this IV compared to the rank 1 IVs. For
+      example, 95% would mean you have 5% less TDO than the rank 1 IVs.
+    </small>
+    <small class="definition">
+      IVs are ranked by their "Stat Product" (attack x defense x stamina) at
+      maximum level within each league, because stat product is proportional
+      to Total Damage Output (TDO) which is the most important metric in PVP.
+      This does not ALWAYS give the optimal IVs for every situation, but is how IVs
+      are usually ranked.
+    </small>
   </div>
 
   <div>
-    Pokemon stats from
-    <a href="https://pokemongo.fandom.com/wiki/List_of_Pok%C3%A9mon_by_statistics">Pokémon GO Wiki</a>
-    available under
-    <a href="https://www.fandom.com/licensing">CC-BY-SA</a>.
+    <p>
+      Pokemon stats from
+      <a href="https://pokemongo.fandom.com/wiki/List_of_Pok%C3%A9mon_by_statistics">Pokémon GO Wiki</a>
+      available under
+      <a href="https://www.fandom.com/licensing">CC-BY-SA</a>.
+    </p>
+    <p>
+      Source available at 
+      <a href="https://github.com/jasharpe/pokemon_go" target="_blank">GitHub</a>.
+    </p>
   </div>
 
 <script src="cp_to_ivs.js"></script>

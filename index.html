@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>The Excellent Pokédex</title>
+
+<link rel="stylesheet" href="cp_to_ivs.css">
+<style>
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .circular-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .title {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="circular-image">
+      <img src="image.jpg" alt="The Excellent Pokédex">
+    </div>
+    <h1 class="title">The Excellent Pokédex</h1>
+  </div>
+  <div class="subtitle">
+    <small>Created by <a target="_blank" href="https://www.youtube.com/@TheExcellentPokedex">The Excellent Pokédex</a></small>
+    <small style="display: block;">
+      Feedback to <a href="mailto:the.excellent.pokedex@gmail.com">the.excellent.pokedex@gmail.com</a>
+    </small>
+  </div>
+  <div class="input-section">
+    <h2>Pokemon Go Tools</h2>
+    <ul>
+      <li><a href="cp_to_ivs.html">CP to Possible Levels/IVs Calculator</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <p>
+      Source available at 
+      <a href="https://github.com/jasharpe/pokemon_go" target="_blank">GitHub</a>.
+    </p>
+  </div>
+</body>
+</html>
