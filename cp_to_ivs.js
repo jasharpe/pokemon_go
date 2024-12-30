@@ -288,6 +288,24 @@ function rankAllLeagues(baseAtk, baseDef, baseSta) {
   };
 }
 
+function adjustTableFontSize() {
+  const table = document.querySelector('.results-section table');
+  const results = document.querySelector('.results-section #results');
+
+  if (!table) {
+    console.error('table does not exist');
+    return;
+  }
+
+  let fontSize = 16; // Start with a base font size
+  table.style.fontSize = `${fontSize}px`;
+
+  while (table.clientWidth > results.clientWidth && fontSize > 10) {
+    fontSize -= 1;
+    table.style.fontSize = `${fontSize}px`;
+  }
+}
+
 document.getElementById('calculateBtn').addEventListener('click', () => {
   const cp = parseInt(document.getElementById('cp').value, 10);
   const attack = parseInt(document.getElementById('attack').value, 10);
@@ -353,6 +371,9 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   tableHtml += '</table>';
 
   resultsContainer.innerHTML = tableHtml;
+
+  // Adjust the table font size to fit within its container
+  adjustTableFontSize();
 });
 
 // Attach event listeners for input changes so that the URL updates each time
@@ -394,4 +415,5 @@ window.addEventListener('DOMContentLoaded', () => {
   parseUrlParams();
   initAutoComplete();  
   document.getElementById('calculateBtn').click();
+  window.addEventListener('resize', adjustTableFontSize);
 });
