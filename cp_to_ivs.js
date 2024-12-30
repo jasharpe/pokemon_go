@@ -206,29 +206,6 @@ function updateUrlParams() {
   document.getElementById('calculateBtn').click();
 }
 
-let precomputedCombos = null;
-function prepareCombos(baseA, baseD, baseS) {
-  if (!precomputedCombos) {
-    const combos = [];
-    for (let aIV = 0; aIV <= 15; aIV++) {
-      for (let dIV = 0; dIV <= 15; dIV++) {
-        for (let sIV = 0; sIV <= 15; sIV++) {
-          const a = baseA + aIV;
-          const d = baseD + dIV;
-          const s = baseS + sIV;
-          combos.push({
-            a, d, s,
-            aIV, dIV, sIV,
-            aDS: a * d * s,
-            aSqrtDS: a * Math.sqrt(d) * Math.sqrt(s)
-          });
-        }
-      }
-    }
-    precomputedCombos = combos.sort((x,y) => x.aSqrtDS - y.aSqrtDS);
-  }
-}
-
 function computeStatProduct(stats) {
   return stats.attack * stats.defense * Math.floor(stats.stamina);
 }
@@ -305,8 +282,8 @@ function adjustTableFontSize() {
   const table = document.querySelector('.results-section table');
   const results = document.querySelector('.results-section #results');
 
-  if (!table) {
-    console.error('table does not exist');
+  if (!table || !results) {
+    console.error('table or results section does not exist');
     return;
   }
 
