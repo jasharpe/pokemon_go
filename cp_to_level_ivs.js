@@ -247,6 +247,22 @@ function computeBestIVsForLeague(baseAtk, baseDef, baseSta, cpLimit) {
   return best;
 }
 
+function computeStatProduct(stats) {
+  return stats.attack * stats.defense * Math.floor(stats.stamina);
+}
+
+function findBestProducts(baseAtk, baseDef, baseSta) {
+  const bestGL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 1500);
+  const bestUL = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 2500);
+  const bestML = computeBestIVsForLeague(baseAtk, baseDef, baseSta, 10000); // Hundo at level 50
+
+  return {
+    GL: bestGL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestGL.a, bestGL.d, bestGL.s), bestGL.level * 2)) : null,
+    UL: bestUL ? computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, bestUL.a, bestUL.d, bestUL.s), bestUL.level * 2)) : null,
+    ML: computeStatProduct(levelAdjusted(withIVs(baseAtk, baseDef, baseSta, 15, 15, 15), 100)) // Level 50
+  };
+}
+
 document.getElementById('calculateBtn').addEventListener('click', () => {
   const cp = parseInt(document.getElementById('cp').value, 10);
   const attack = parseInt(document.getElementById('attack').value, 10);
@@ -265,51 +281,41 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   }
 
   const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
-
-  const bestGL = computeBestIVsForLeague(attack, defense, stamina, 1500);
-  const bestUL = computeBestIVsForLeague(attack, defense, stamina, 2500);
-
-  if (bestGL) {
-    document.getElementById('gl-ivs').value = `${bestGL.a}/${bestGL.d}/${bestGL.s}`;
-  }
-  if (bestUL) {
-    document.getElementById('ul-ivs').value = `${bestUL.a}/${bestUL.d}/${bestUL.s}`;
-  }
+  const bestProducts = findBestProducts(attack, defense, stamina);
 
   if (results.length === 0) {
       resultsContainer.innerHTML = '<div class="no-results">No results found.</div>';
       return;
   }
 
-  // Add special tags
+  // Compute stat products and percentages
   let processedResults = results.map(r => {
-      let specialTags = [];
-      if (r.IVs === "15/15/15") {
-          specialTags.push("Hundo");
-      }
-      if (glIvsInput && r.IVs === glIvsInput) {
-          specialTags.push("Best GL");
-      }
-      if (ulIvsInput && r.IVs === ulIvsInput) {
-          specialTags.push("Best UL");
-      }
+      const stats = withIVs(attack, defense, stamina, ...r.IVs.split('/').map(Number));
+      const adjStats = levelAdjusted(stats, r.level * 2);
+      const product = computeStatProduct(adjStats);
+
+      const glPercent = bestProducts.GL ? (product / bestProducts.GL * 100).toFixed(2) : 'N/A';
+      const ulPercent = bestProducts.UL ? (product / bestProducts.UL * 100).toFixed(2) : 'N/A';
+      const mlPercent = bestProducts.ML ? (product / bestProducts.ML * 100).toFixed(2) : 'N/A';
+
       return {
-          level: r.level,
           IVs: r.IVs,
-          specialTags: specialTags
+          glPercent,
+          ulPercent,
+          mlPercent
       };
   });
 
-  // Sort so that special results appear at the top
+  // Sort by highest percentage in any league
   processedResults.sort((a, b) => {
-      return b.specialTags.length - a.specialTags.length;
+      const maxA = Math.max(a.glPercent === 'N/A' ? 0 : parseFloat(a.glPercent), a.ulPercent === 'N/A' ? 0 : parseFloat(a.ulPercent), a.mlPercent === 'N/A' ? 0 : parseFloat(a.mlPercent));
+      const maxB = Math.max(b.glPercent === 'N/A' ? 0 : parseFloat(b.glPercent), b.ulPercent === 'N/A' ? 0 : parseFloat(b.ulPercent), b.mlPercent === 'N/A' ? 0 : parseFloat(b.mlPercent));
+      return maxB - maxA;
   });
 
-  let tableHtml = '<table><tr><th>Level</th><th>IVs (Attack/Defense/Stamina)</th><th>Special</th></tr>';
+  let tableHtml = '<table><tr><th>IVs (Attack/Defense/Stamina)</th><th>Great League (%)</th><th>Ultra League (%)</th><th>Master League (%)</th></tr>';
   processedResults.forEach(r => {
-      let specialCell = r.specialTags.length > 0 ? r.specialTags.join(", ") : "";
-      let rowClass = r.specialTags.length > 0 ? "highlight" : "";
-      tableHtml += `<tr class="${rowClass}"><td>${r.level}</td><td>${r.IVs}</td><td>${specialCell}</td></tr>`;
+      tableHtml += `<tr><td>${r.IVs}</td><td>${r.glPercent}</td><td>${r.ulPercent}</td><td>${r.mlPercent}</td></tr>`;
   });
   tableHtml += '</table>';
 
