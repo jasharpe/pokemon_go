@@ -167,6 +167,9 @@ function parseUrlParams() {
 
   const pokemonVal = params.get('pokemon');
   if (pokemonVal !== null) document.getElementById('autoComplete').value = pokemonVal;
+
+  const raidVal = params.get('raid');
+  document.getElementById('raidCheckbox').checked = (raidVal === 'true');
 }
 
 /**
@@ -189,6 +192,12 @@ function updateUrlParams() {
   if (defVal) params.set('defense', defVal);
   if (staVal) params.set('stamina', staVal);
   if (pokemonVal) params.set('pokemon', pokemonVal);
+
+  if (document.getElementById('raidCheckbox').checked) {
+    params.set('raid', 'true');
+  } else {
+    params.delete('raid');
+  }
 
   // Replace the current history state with the updated query string
   const newUrl = window.location.pathname + '?' + params.toString();
@@ -384,6 +393,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 ['cp', 'attack', 'defense', 'stamina'].forEach(id => {
   document.getElementById(id).addEventListener('input', updateUrlParams);
 });
+
+document.getElementById('raidCheckbox').addEventListener('change', updateUrlParams);
 
 function initAutoComplete() {
   fetch('pokemon_stats.json')
