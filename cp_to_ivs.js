@@ -123,16 +123,13 @@ function levelAdjusted(stats, doubled_level) {
   };
 }
 
-function findPossibleLevelsAndIVs(baseAttack, baseDefense, baseStamina, targetCP) {
-  const raidMode = document.getElementById('raidCheckbox').checked;
+function findPossibleLevelsAndIVs(baseAttack, baseDefense, baseStamina, targetCP, ivFloor, candidateLevels) {
   let results = [];
-  // If raidMode is on, only check doubled_level 40 (Level 20) and 50 (Level 25).
-  const levels = raidMode ? [40, 50] : [...Array(50).keys()].map(i => (i + 1) * 2);
 
-  for (let attackIV = 0; attackIV <= 15; attackIV++) {
-    for (let defenseIV = 0; defenseIV <= 15; defenseIV++) {
-      for (let staminaIV = 0; staminaIV <= 15; staminaIV++) {
-        for (const dl of levels) {
+  for (let attackIV = ivFloor; attackIV <= 15; attackIV++) {
+    for (let defenseIV = ivFloor; defenseIV <= 15; defenseIV++) {
+      for (let staminaIV = ivFloor; staminaIV <= 15; staminaIV++) {
+        for (const dl of candidateLevels) {
           const combinedStats = withIVs(baseAttack, baseDefense, baseStamina, attackIV, defenseIV, staminaIV);
           const adjStats = levelAdjusted(combinedStats, dl);
           const calcCP = cpFormula(adjStats.attack, adjStats.defense, adjStats.stamina);
@@ -168,8 +165,8 @@ function parseUrlParams() {
   const pokemonVal = params.get('pokemon');
   if (pokemonVal !== null) document.getElementById('autoComplete').value = pokemonVal;
 
-  const raidVal = params.get('raid');
-  document.getElementById('raidCheckbox').checked = (raidVal === 'true');
+  const scenario = params.get('scenario');
+  if (scenario !== null) document.getElementById('scenario').value = scenario;
 }
 
 /**
@@ -185,6 +182,7 @@ function updateUrlParams() {
   const defVal = document.getElementById('defense').value.trim();
   const staVal = document.getElementById('stamina').value.trim();
   const pokemonVal = document.getElementById('autoComplete').value.trim();
+  const scenario = document.getElementById('scenario').value.trim();
 
   // Set or delete each parameter only if there is a value
   if (cpVal)  params.set('cp', cpVal);
@@ -192,12 +190,7 @@ function updateUrlParams() {
   if (defVal) params.set('defense', defVal);
   if (staVal) params.set('stamina', staVal);
   if (pokemonVal) params.set('pokemon', pokemonVal);
-
-  if (document.getElementById('raidCheckbox').checked) {
-    params.set('raid', 'true');
-  } else {
-    params.delete('raid');
-  }
+  if (scenario) params.set('scenario', scenario);
 
   // Replace the current history state with the updated query string
   const newUrl = window.location.pathname + '?' + params.toString();
@@ -210,12 +203,12 @@ function computeStatProduct(stats) {
   return stats.attack * stats.defense * Math.floor(stats.stamina);
 }
 
-function rankAllIVs(baseAtk, baseDef, baseSta, cpLimit) {
+function rankAllIVs(baseAtk, baseDef, baseSta, ivFloor, cpLimit) {
   const products = [];
   const MAX_LEVEL = 50;
-  for (let a = 0; a <= 15; a++) {
-    for (let d = 0; d <= 15; d++) {
-      STAMINA: for (let s = 0; s <= 15; s++) {
+  for (let a = ivFloor; a <= 15; a++) {
+    for (let d = ivFloor; d <= 15; d++) {
+      STAMINA: for (let s = ivFloor; s <= 15; s++) {
         var last_product = null;
         for (let dl = 2; dl <= 2 * MAX_LEVEL; dl++) {
           const cpm = DOUBLED_LEVEL_TO_CPM[dl];
@@ -263,12 +256,12 @@ function rankAllIVs(baseAtk, baseDef, baseSta, cpLimit) {
   };
 }
 
-function rankAllLeagues(baseAtk, baseDef, baseSta) {
-  const glRanks = rankAllIVs(baseAtk, baseDef, baseSta, 1500);
+function rankAllLeagues(baseAtk, baseDef, baseSta, ivFloor) {
+  const glRanks = rankAllIVs(baseAtk, baseDef, baseSta, ivFloor, 1500);
   console.log(glRanks);
-  const ulRanks = rankAllIVs(baseAtk, baseDef, baseSta, 2500);
+  const ulRanks = rankAllIVs(baseAtk, baseDef, baseSta, ivFloor, 2500);
   console.log(ulRanks);
-  const mlRanks = rankAllIVs(baseAtk, baseDef, baseSta, 10000);
+  const mlRanks = rankAllIVs(baseAtk, baseDef, baseSta, ivFloor, 10000);
   console.log(mlRanks);
 
   return {
@@ -303,6 +296,57 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   const attack = parseInt(document.getElementById('attack').value, 10);
   const defense = parseInt(document.getElementById('defense').value, 10);
   const stamina = parseInt(document.getElementById('stamina').value, 10);
+  const scenario = document.getElementById('scenario').value;
+  var ivFloorForRanks;
+  var ivFloorForPossibilities;
+  var candidateLevels;
+  switch (scenario) {
+    case "wild":
+      ivFloorForRanks = 0;
+      ivFloorForPossibilities = 0;
+      // Levels 1 - 30
+      candidateLevels = Array.from({ length: 30 }, (_, i) => 2 + i * 2);
+      break;
+    case "wildwb":
+      ivFloorForRanks = 4;
+      ivFloorForPossibilities = 4;
+      // Levels 6 - 35
+      candidateLevels = Array.from({ length: 30 }, (_, i) => 12 + i * 2);
+      break;
+    case "research":
+      ivFloorForRanks = 10;
+      ivFloorForPossibilities = 10;
+      // Level 15 only
+      candidateLevels = [30];
+      break;
+    case "raid":
+      ivFloorForRanks = 10;
+      ivFloorForPossibilities = 10;
+      // Level 20 only
+      candidateLevels = [40];
+      break;
+    case "raidwb":
+      ivFloorForRanks = 10;
+      ivFloorForPossibilities = 10;
+      // Level 25 only
+      candidateLevels = [50];
+      break;
+    case "lraid":
+      ivFloorForRanks = 10;
+      ivFloorForPossibilities = 10;
+      // Level 20 only
+      candidateLevels = [40];
+      break;
+    case "lraidwb":
+      ivFloorForRanks = 10;
+      ivFloorForPossibilities = 10;
+      // Level 25 only
+      candidateLevels = [50];
+      break;
+    default:
+      console.error('unexpected scenario value', scenario);
+      break;
+  }
 
   const resultsContainer = document.getElementById('results');
   const resultCount = document.getElementById('result-count');
@@ -316,8 +360,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
       resultsContainer.innerHTML = '<div class="no-results">Please enter valid numbers for all required fields.</div>';
       return;
     }
-    const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp);
-    const leagueRanks = rankAllLeagues(attack, defense, stamina);
+    const results = findPossibleLevelsAndIVs(attack, defense, stamina, cp, ivFloorForPossibilities, candidateLevels);
+    const leagueRanks = rankAllLeagues(attack, defense, stamina, ivFloorForRanks);
 
     if (results.length === 0) {
       if (localCalcId !== currentCalcId) return; // Abort if new calculation started
@@ -383,7 +427,35 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
   document.getElementById(id).addEventListener('input', updateUrlParams);
 });
 
-document.getElementById('raidCheckbox').addEventListener('change', updateUrlParams);
+document.getElementById('scenario').addEventListener('change', updateUrlParams);
+document.getElementById('scenario').addEventListener('change', () => {
+  const explanation = document.getElementById('scenario-explanation');
+  switch (document.getElementById('scenario').value) {
+    case "wild":
+      explanation.innerText = 'IV Floor 0/0/0, Level 1-30';
+      break;
+    case "wildwb":
+      explanation.innerText = 'IV Floor 4/4/4, Level 6-35';
+      break;
+    case "research":
+      explanation.innerText = 'IV Floor 10/10/10, Level 15';
+      break;
+    case "raid":
+      explanation.innerText = 'IV Floor 10/10/10, Level 20';
+      break;
+    case "raidwb":
+      explanation.innerText = 'IV Floor 10/10/10, Level 25';
+      break;
+    case "lraid":
+      explanation.innerText = 'IV Floor 10/10/10, Level 20, IV Floor for GL/UL Ranks';
+      break;
+    case "lraidwb":
+      explanation.innerText = 'IV Floor 10/10/10, Level 25, IV Floor for GL/UL Ranks';
+      break;
+    default:
+      console.error('unexpected scenario value', document.getElementById('scenario').value);
+  }
+});
 
 function initAutoComplete() {
   fetch('pokemon_stats.json')
@@ -394,22 +466,37 @@ function initAutoComplete() {
         data: {
           src: data.map(p => p.name),
         },
-       events: {
-            input: {
-                selection: (event) => {
-                    const selection = event.detail.selection.value;
-                    autoCompleteJS.input.value = selection;
-                    const p = data.find(item => item.name === selection);
-                    if (p) {
-                      document.getElementById('attack').value = p.attack;
-                      document.getElementById('defense').value = p.defense;
-                      document.getElementById('stamina').value = p.stamina;
-                    }
-                    updateUrlParams();
-                    document.getElementById('calculateBtn').click();
+        submit: true,
+        events: {
+          input: {
+              selection: (event) => {
+                const selection = event.detail.selection.value;
+                autoCompleteJS.input.value = selection;
+                const p = data.find(item => item.name === selection);
+                if (p) {
+                  document.getElementById('attack').value = p.attack;
+                  document.getElementById('defense').value = p.defense;
+                  document.getElementById('stamina').value = p.stamina;
                 }
+                updateUrlParams();
+              },
             }
         }
+      });
+      document.querySelector("#autoComplete").addEventListener("keydown", event => {
+        if (event.key !== 'Enter' || !autoCompleteJS.feedback || autoCompleteJS.cursor !== -1 || autoCompleteJS.feedback.results.length === 0) {
+          return;
+        }
+        console.log(autoCompleteJS.feedback);
+        autoCompleteJS.select(0);
+        updateUrlParams();
+      });
+      document.querySelector("#autoComplete").addEventListener("blur", event => {
+        if (!autoCompleteJS.feedback || autoCompleteJS.feedback.results.length === 0) {
+          return;
+        }
+        autoCompleteJS.select(0);
+        updateUrlParams();
       });
     })
     .catch(err => console.error(err));

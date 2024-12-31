@@ -64,14 +64,22 @@
     <label for="cp">CP:</label>
     <input type="number" id="cp" placeholder="Enter CP" required min="10"/>
 
+    <label for="scenario">Scenario:</label>
+    <select id="scenario">
+      <option value="wild">Wild Catch</option>
+      <option value="wildwb">Wild Catch (Weather Boosted)</option>
+      <option value="research">Research Encounter</option>
+      <option value="raid">Non-Legendary Raid</option>
+      <option value="raidwb">Non-Legendary Raid (Weather Boost)</option>
+      <option value="lraid">Legendary Raid</option>
+      <option value="lraidwb">Legendary Raid (Weather Boost)</option>
+    </select>
+    <div id="scenario-explanation">IV Floor 0/0/0, Level 1-30</div>
+
     <label for="pokemon">Select a Pokemon:</label>
     <div class="autoComplete_wrapper">
       <input id="autoComplete" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
     </div>
-
-    <label>
-      <input type="checkbox" id="raidCheckbox">Raid?</input>
-    </label>
 
     <label for="attack">Base Attack:</label>
     <input type="number" id="attack" placeholder="Enter base attack stat" required min="1" />
