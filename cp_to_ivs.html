@@ -31,14 +31,20 @@
 
       <p>This may help inform decisions such as whether to use a Master Ball.
 
-      <p>Enter the observed <b>CP</b> and <b>Pokemon species</b>, check <b>Raid?</b>
-        if applicable (this will restrict results to the levels possible from a raid),
+      <p>Enter the observed <b>CP</b> and <b>Pokemon species</b>,
+        set the applicable <b>Scenario</b> (which affects IV floors, level restrictions, and sometimes rank calculations),
         and results will appear.
-      
-      <p>Results are sorted to show you the best IVs first, and the table shows you how the
-        IVs rank in each league. Rank 1 is the best, and Rank 4096 is the worst.
 
-      <p>If a Pokemon is missing from the autocomplete list, you can enter its stats manually.
+      <p>Base stats are set automatically based on Pokemon species,
+        but to help when a Pokemon is missing from the autocomplete list,
+        or its stats are incorrect,
+        you may enter its stats manually.
+      
+      <p>The results table is sorted to show you the best IVs first,
+        according to their ranks in any league (with Rank 1 being the best).
+        So, for example, a set of IVs that is highly ranked in Great League will
+        appear at or near the top of the table, even if it is not particular good
+        in Master League.
 
       <p><b>Stat Product</b> (SP) is the product of the Pokemon's total stats:
         attack x defense x stamina.
@@ -58,6 +64,13 @@
       <p>The calculator will never show half levels, even though they may satisfy
         certain CP/stat combinations, because wild Pokemon only spawn with integer
         levels, not half levels.
+      
+      <p>If you select one of the Legendary Raid scenarios, then ranks for Great and Ultra
+        League will be calculated assuming an IV floor of 10/10/10 - this is because it is
+        extremely impractical to obtain Legendary Pokemon with specific IVs below this floor
+        using trades. This is how <a href="https://pvpoke.com" target="_blank">pvpoke.com</a>
+        ranks Legendaries. If you want to turn this ranking behaviour off, select one of
+        the non-Legendary Raid scenarios instead.
     </div>
   </div>
   <div class="input-section">
