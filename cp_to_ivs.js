@@ -167,6 +167,7 @@ function parseUrlParams() {
 
   const scenario = params.get('scenario');
   if (scenario !== null) document.getElementById('scenario').value = scenario;
+  updateExplanationText();
 }
 
 /**
@@ -286,6 +287,35 @@ function adjustTableFontSize() {
   while (table.clientWidth > results.clientWidth && fontSize > 10) {
     fontSize -= 1;
     table.style.fontSize = `${fontSize}px`;
+  }
+}
+
+function updateExplanationText() {
+  const explanation = document.getElementById('scenario-explanation');
+  switch (document.getElementById('scenario').value) {
+    case "wild":
+      explanation.innerText = 'IV Floor 0/0/0, Level 1-30';
+      break;
+    case "wildwb":
+      explanation.innerText = 'IV Floor 4/4/4, Level 6-35';
+      break;
+    case "research":
+      explanation.innerText = 'IV Floor 10/10/10, Level 15';
+      break;
+    case "raid":
+      explanation.innerText = 'IV Floor 10/10/10, Level 20';
+      break;
+    case "raidwb":
+      explanation.innerText = 'IV Floor 10/10/10, Level 25';
+      break;
+    case "lraid":
+      explanation.innerText = 'IV Floor 10/10/10, Level 20, IV Floor for GL/UL Ranks';
+      break;
+    case "lraidwb":
+      explanation.innerText = 'IV Floor 10/10/10, Level 25, IV Floor for GL/UL Ranks';
+      break;
+    default:
+      console.error('unexpected scenario value', document.getElementById('scenario').value);
   }
 }
 
@@ -428,34 +458,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 });
 
 document.getElementById('scenario').addEventListener('change', updateUrlParams);
-document.getElementById('scenario').addEventListener('change', () => {
-  const explanation = document.getElementById('scenario-explanation');
-  switch (document.getElementById('scenario').value) {
-    case "wild":
-      explanation.innerText = 'IV Floor 0/0/0, Level 1-30';
-      break;
-    case "wildwb":
-      explanation.innerText = 'IV Floor 4/4/4, Level 6-35';
-      break;
-    case "research":
-      explanation.innerText = 'IV Floor 10/10/10, Level 15';
-      break;
-    case "raid":
-      explanation.innerText = 'IV Floor 10/10/10, Level 20';
-      break;
-    case "raidwb":
-      explanation.innerText = 'IV Floor 10/10/10, Level 25';
-      break;
-    case "lraid":
-      explanation.innerText = 'IV Floor 10/10/10, Level 20, IV Floor for GL/UL Ranks';
-      break;
-    case "lraidwb":
-      explanation.innerText = 'IV Floor 10/10/10, Level 25, IV Floor for GL/UL Ranks';
-      break;
-    default:
-      console.error('unexpected scenario value', document.getElementById('scenario').value);
-  }
-});
+
+document.getElementById('scenario').addEventListener('change', updateExplanationText);
 
 function initAutoComplete() {
   fetch('pokemon_stats.json')
