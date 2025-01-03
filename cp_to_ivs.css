@@ -124,19 +124,19 @@ h1 small {
   font-size: 15px;
 }
 
-#helpToggleBtn {
+.zippy {
   background: none;
   border: none;
   margin: 5px 0;
   padding: 0;
 }
 
-#helpToggleBtn::before {
+.zippy::before {
   content: '▶ ';
   font-family: 'monospace';
 }
 
-#helpToggleBtn.open::before {
+.zippy.open::before {
   content: '▼ ';
   font-family: 'monospace';
 }

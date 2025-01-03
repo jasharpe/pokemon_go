@@ -22,7 +22,7 @@
     </small>
   </div>
   <div>
-    <button id="helpToggleBtn">Help</button>
+    <button id="help-zippy" class="zippy">Help</button>
     <div id="help-section" style="display: none;">
       <p>This calculator helps you find all possible level and IV combinations for a Pokémon.
 
@@ -71,6 +71,28 @@
         (this requires trades). This is how <a href="https://pvpoke.com" target="_blank">pvpoke.com</a>
         ranks Legendaries. If you want to turn this ranking behaviour off, select one of
         the non-Legendary Raid scenarios instead.
+    </div>
+  </div>
+  <div>
+    <button id="examples-zippy" class="zippy">Examples</button>
+    <div id="examples-section" style="display: none;">
+      <ul>
+        <li>
+          <a href="?cp=1499&attack=202&defense=231&stamina=207&pokemon=Galarian+Moltres&scenario=wild">
+            Potential Hundo Galarian Moltres
+          </a>
+        </li>
+        <li>
+          <a href="?cp=2136&attack=285&defense=198&stamina=172&pokemon=Darkrai&scenario=lraid">
+            Hundo Darkrai
+          </a>
+        </li>
+        <li>
+          <a href="?cp=80&attack=189&defense=146&stamina=146&pokemon=Sneasel&scenario=wild">
+            Terrible Sneasel
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="input-section">
@@ -134,19 +156,6 @@
   </div>
 
 <script src="cp_to_ivs.js"></script>
-<script>
-  document.getElementById('helpToggleBtn').addEventListener('click', () => {
-    const helpSection = document.getElementById('help-section');
-    const btn = document.getElementById('helpToggleBtn');
-    if (helpSection.style.display === 'none') {
-      helpSection.style.display = 'block';
-      document.getElementById('helpToggleBtn').textContent = 'Help';
-    } else {
-      helpSection.style.display = 'none';
-      document.getElementById('helpToggleBtn').textContent = 'Help';
-    }
-    btn.classList.toggle('open');
-  });
-</script>
+
 </body>
 </html>

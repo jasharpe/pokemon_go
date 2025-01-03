@@ -491,13 +491,6 @@ function initAutoComplete() {
         autoCompleteJS.select(0);
         updateUrlParams();
       });
-      document.querySelector("#autoComplete").addEventListener("blur", event => {
-        if (!autoCompleteJS.feedback || autoCompleteJS.feedback.results.length === 0) {
-          return;
-        }
-        autoCompleteJS.select(0);
-        updateUrlParams();
-      });
     })
     .catch(err => console.error(err));
 }
@@ -507,4 +500,20 @@ window.addEventListener('DOMContentLoaded', () => {
   initAutoComplete();  
   document.getElementById('calculateBtn').click();
   window.addEventListener('resize', adjustTableFontSize);
+});
+
+['help', 'examples'].forEach(section => {
+  const id = section + '-zippy';
+  const section_id = section + '-section';
+  const id_elt = document.getElementById(id);
+  id_elt.addEventListener('click', () => {
+    const section_elt = document.getElementById(section_id);
+    const btn = document.getElementById(id);
+    if (section_elt.style.display === 'none') {
+      section_elt.style.display = 'block';
+    } else {
+      section_elt.style.display = 'none';
+    }
+    btn.classList.toggle('open');
+  });
 });
