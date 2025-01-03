@@ -308,25 +308,25 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
       candidateLevels = Array.from({ length: 30 }, (_, i) => 2 + i * 2);
       break;
     case "wildwb":
-      ivFloorForRanks = 4;
+      ivFloorForRanks = 0;
       ivFloorForPossibilities = 4;
       // Levels 6 - 35
       candidateLevels = Array.from({ length: 30 }, (_, i) => 12 + i * 2);
       break;
     case "research":
-      ivFloorForRanks = 10;
+      ivFloorForRanks = 0;
       ivFloorForPossibilities = 10;
       // Level 15 only
       candidateLevels = [30];
       break;
     case "raid":
-      ivFloorForRanks = 10;
+      ivFloorForRanks = 0;
       ivFloorForPossibilities = 10;
       // Level 20 only
       candidateLevels = [40];
       break;
     case "raidwb":
-      ivFloorForRanks = 10;
+      ivFloorForRanks = 0;
       ivFloorForPossibilities = 10;
       // Level 25 only
       candidateLevels = [50];
