@@ -102,6 +102,28 @@ const DOUBLED_LEVEL_TO_CPM = {
   102: 0.84529999
 };
 
+// https://pokemongo.fandom.com/wiki/Category:Untradable_Pok%C3%A9mon
+const UNTRADEABLE = new Set([
+  "Celebi",
+  "Darkrai",
+  "Deoxys",
+  "Deoxys Attack",
+  "Deoxys Defense",
+  "Deoxys Speed",
+  "Diancie",
+  "Genesect",
+  "Hoopa",
+  "Jirachi",
+  "Keldeo",
+  "Marshadow",
+  "Meloetta",
+  "Mew",
+  "Shaymin",
+  "Victini",
+  "Zarude",
+  "Zygarde",
+]);
+
 function cpFormula(attack, defense, stamina) {
   return Math.floor(Math.max(10, attack * Math.sqrt(defense) * Math.sqrt(stamina) / 10));
 }
@@ -164,6 +186,7 @@ function parseUrlParams() {
 
   const pokemonVal = params.get('pokemon');
   if (pokemonVal !== null) document.getElementById('autoComplete').value = pokemonVal;
+  updatePokemonExplanationText();
 
   const scenario = params.get('scenario');
   if (scenario !== null) document.getElementById('scenario').value = scenario;
@@ -308,14 +331,18 @@ function updateExplanationText() {
     case "raidwb":
       explanation.innerText = 'IV Floor 10/10/10, Level 25';
       break;
-    case "lraid":
-      explanation.innerText = 'IV Floor 10/10/10, Level 20, IV Floor for GL/UL Ranks';
-      break;
-    case "lraidwb":
-      explanation.innerText = 'IV Floor 10/10/10, Level 25, IV Floor for GL/UL Ranks';
-      break;
     default:
       console.error('unexpected scenario value', document.getElementById('scenario').value);
+  }
+}
+
+function updatePokemonExplanationText() {
+  const pokemon = document.getElementById('autoComplete').value;
+  const explanation = document.getElementById('pokemon-explanation');
+  if (UNTRADEABLE.has(pokemon)) {
+    explanation.innerText = 'This Pokemon is untradeable, so the IV floor for rank calculations is the scenario IV floor (for raids or research, this means 10/10/10).';
+  } else {
+    explanation.innerText = '';
   }
 }
 
@@ -323,52 +350,36 @@ let currentCalcId = 0;
 
 document.getElementById('calculateBtn').addEventListener('click', () => {
   const cp = parseInt(document.getElementById('cp').value, 10);
+  const pokemon = document.getElementById('autoComplete').value;
   const attack = parseInt(document.getElementById('attack').value, 10);
   const defense = parseInt(document.getElementById('defense').value, 10);
   const stamina = parseInt(document.getElementById('stamina').value, 10);
   const scenario = document.getElementById('scenario').value;
-  var ivFloorForRanks;
+  var ivFloorForRanks = UNTRADEABLE.has(pokemon) ? 10 : 0;
   var ivFloorForPossibilities;
   var candidateLevels;
   switch (scenario) {
     case "wild":
-      ivFloorForRanks = 0;
       ivFloorForPossibilities = 0;
       // Levels 1 - 30
       candidateLevels = Array.from({ length: 30 }, (_, i) => 2 + i * 2);
       break;
     case "wildwb":
-      ivFloorForRanks = 0;
       ivFloorForPossibilities = 4;
       // Levels 6 - 35
       candidateLevels = Array.from({ length: 30 }, (_, i) => 12 + i * 2);
       break;
     case "research":
-      ivFloorForRanks = 0;
       ivFloorForPossibilities = 10;
       // Level 15 only
       candidateLevels = [30];
       break;
     case "raid":
-      ivFloorForRanks = 0;
       ivFloorForPossibilities = 10;
       // Level 20 only
       candidateLevels = [40];
       break;
     case "raidwb":
-      ivFloorForRanks = 0;
-      ivFloorForPossibilities = 10;
-      // Level 25 only
-      candidateLevels = [50];
-      break;
-    case "lraid":
-      ivFloorForRanks = 10;
-      ivFloorForPossibilities = 10;
-      // Level 20 only
-      candidateLevels = [40];
-      break;
-    case "lraidwb":
-      ivFloorForRanks = 10;
       ivFloorForPossibilities = 10;
       // Level 25 only
       candidateLevels = [50];
@@ -377,6 +388,7 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
       console.error('unexpected scenario value', scenario);
       break;
   }
+  ivFloorForRanks = Math.min(ivFloorForPossibilities, ivFloorForRanks);
 
   const resultsContainer = document.getElementById('results');
   const resultCount = document.getElementById('result-count');
@@ -460,6 +472,8 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
 document.getElementById('scenario').addEventListener('change', updateUrlParams);
 
 document.getElementById('scenario').addEventListener('change', updateExplanationText);
+
+document.getElementById('autoComplete').addEventListener('change', updatePokemonExplanationText);
 
 function initAutoComplete() {
   fetch('pokemon_stats.json')

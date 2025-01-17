@@ -145,7 +145,7 @@ h1 small {
   margin-top: 10px;
 }
 
-#scenario-explanation {
+#scenario-explanation, #pokemon-explanation {
   color: #666;
   font-size: 12px;
   margin: -8px 0 12px 0;

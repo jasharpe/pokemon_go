@@ -37,7 +37,7 @@
       <p>This may help inform decisions such as whether to use a Master Ball.
 
       <p>Enter the observed <b>CP</b> and <b>Pokemon species</b>,
-        set the applicable <b>Scenario</b> (which affects IV floors, level restrictions, and sometimes rank calculations),
+        set the applicable <b>Scenario</b> (which affects IV floors and level restrictions),
         and results will appear.
 
       <p>Base stats are set automatically based on Pokemon species,
@@ -70,12 +70,11 @@
         certain CP/stat combinations, because wild Pokemon only spawn with integer
         levels, not half levels.
       
-      <p>If you select one of the Legendary Raid scenarios, then ranks for Great and Ultra
-        League will be calculated assuming an IV floor of 10/10/10 - this is because it is
-        somewhat impractical to obtain Legendary Pokemon with specific IVs below this floor
-        (this requires trades). This is how <a href="https://pvpoke.com" target="_blank">pvpoke.com</a>
-        ranks Legendaries. If you want to turn this ranking behaviour off, select one of
-        the non-Legendary Raid scenarios instead.
+      <p>For <a href="https://pokemongo.fandom.com/wiki/Category:Untradable_Pok%C3%A9mon">untradeable Pokemon</a>
+        (Darkrai, Deoxys, Genesect, Zygarde, etc), ranks for Great and Ultra
+        League are calculated assuming an IV floor of 10/10/10
+        (the IV floor for raids and research encounters) -
+        this is because it is impossible to obtain them with lower IVs.
       
       <p>If you'd rather use an overlay app with similar information, check out Calcy IV
         (<a href="https://play.google.com/store/apps/details?id=tesmath.calcy" target="_blank">Android</a>,
@@ -92,15 +91,14 @@
           </a>
         </li>
         <li>
-          <a href="?cp=2136&attack=285&defense=198&stamina=172&pokemon=Darkrai&scenario=lraid">
+          <a href="?cp=2136&attack=285&defense=198&stamina=172&pokemon=Darkrai&scenario=raid">
             Hundo Darkrai
           </a>
         </li>
         <li>
-          <a href="?cp=2080&attack=285&defense=198&stamina=172&pokemon=Darkrai&scenario=lraid">
-            Potential Ultra League Rank 1 Darkrai</a> (ranks calculated with 10/10/10 IV floor,
-            <a href="https://pvpoke.com/rankings/all/2500/overall/darkrai/" target="_blank">
-              agreeing with pvpoke.com</a>)
+          <a href="?cp=2080&attack=285&defense=198&stamina=172&pokemon=Darkrai&scenario=raid">
+            Potential Ultra League Rank 1 Darkrai</a>
+            (ranks calculated with 10/10/10 IV floor because Darkrai is untradeable)
         </li>
         <li>
           <a href="?cp=80&attack=189&defense=146&stamina=146&pokemon=Sneasel&scenario=wild">
@@ -119,10 +117,8 @@
       <option value="wild">Wild Catch</option>
       <option value="wildwb">Wild Catch (Weather Boosted)</option>
       <option value="research">Research Encounter</option>
-      <option value="raid">Non-Legendary Raid</option>
-      <option value="raidwb">Non-Legendary Raid (Weather Boost)</option>
-      <option value="lraid">Legendary Raid</option>
-      <option value="lraidwb">Legendary Raid (Weather Boost)</option>
+      <option value="raid">Raid</option>
+      <option value="raidwb">Raid (Weather Boost)</option>
     </select>
     <div id="scenario-explanation">IV Floor 0/0/0, Level 1-30</div>
 
@@ -130,6 +126,7 @@
     <div class="autoComplete_wrapper">
       <input id="autoComplete" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
     </div>
+    <div id="pokemon-explanation"></div>
 
     <label for="attack">Base Attack:</label>
     <input type="number" id="attack" placeholder="Enter base attack stat" required min="1" />
